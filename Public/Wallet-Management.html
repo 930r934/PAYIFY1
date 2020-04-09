@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Wallet-Management</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700,800" rel="stylesheet">
+
+  <link rel="stylesheet" href="css1/bootstrap.css">
+    <link rel="stylesheet" type="text/css1" href="css1/all.min.css">
+    <!-- Theme Style -->
+    <link rel="stylesheet" href="css1/style.css">
+  </head>
+
+
+
+
+<body class="animsition">
+
+
+
+	<header class="header1">
+		<div class="container-menu-header">
+			<div class="topbar">
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+				</div>
+
+				<span class="topbar-child1">
+					Free shipping for standard order over Rs1000
+				</span>
+
+				<div class="topbar-child2">
+
+					<span class="topbar-email">
+						teamPayify@example.com
+					</span>
+
+
+				</div>
+			</div>
+
+
+			<div class="wrap_header">
+				<div class="logo">
+					<img src="images/logo.jpg">
+				</div>
+					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Hey <span id="navuser">user</span>! </strong> </h4>
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+
+							<li>
+								<a href="Main-Home.html">Home</a>
+								<ul class="sub_menu">
+									<li><a href="Profile-Management.html">Profile Management</a></li>
+									<li><a href="Wallet-Management.html">Wallet Management</a></li>
+									<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
+								</ul>
+							</li>
+                            <li>
+																<a>Shop</a>
+                                <ul class="sub_menu">
+									<li><a href="Phones.html">Phones</a></li>
+									<li><a href="Accessories.html">Accessories</a></li>
+								</ul>
+							</li>
+							<li>
+									<a>Book</a>
+                                <ul class="sub_menu">
+									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
+									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
+								</ul>
+							</li>
+							<li><a>Bill</a>
+								<ul class="sub_menu">
+									<li><a href="electric-City.html">Electricity</a></li>
+									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="Help.html">Help</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-icons">
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" >
+
+							</ul>
+
+							<div class="header-cart-buttons" >
+									Rs
+									<h2 style="font-family: fantasy;" id="yomoneyb">
+
+										0
+									</h2>
+
+									<!-- Button -->
+
+									<a href="Profile-Management.html" style="width:100%; padding:20px; text-align: center;">
+									Profile Management
+									</a>
+
+									<button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funct123()">
+										Logout
+									</button>
+
+							</div>
+						</div>
+					</div>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti" id='num1'>0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" id="jackS">
+
+							</ul>
+
+							<div class="header-cart-buttons">
+
+									<!-- Button -->
+									<a href="Shopping-Cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/logo.jpg" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-01.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-02.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-03.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: $75.00
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
+					<span class="hamburger-box">
+						<span class="hamburger-inner"></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+ <!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								fashe@example.com
+							</span>
+
+							<div class="topbar-language rs1-select2">
+								<select class="selection-1" name="time">
+									<option>USD</option>
+									<option>EUR</option>
+								</select>
+							</div>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+						<ul class="sub-menu">
+							<li><a href="index.html">Homepage V1</a></li>
+							<li><a href="home-02.html">Homepage V2</a></li>
+							<li><a href="home-03.html">Homepage V3</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Shop</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.html">Features</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="blog.html">Blog</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+	</header>
+
+
+  <section class="bgwhite p-t-66 p-b-38">
+	<div class="card" style="margin:auto; margin-bottom:50px; margin-top:150px; width: 90%">
+
+        <div class="card-header" style="letter-spacing: 5px;font-size: large;">
+          WALLET <i class="fa fa-wallet"></i>
+        </div>
+        <div class="card-body">
+
+          <div id="min-wallet" style="display: none" class="alert alert-warning alert-dismissible fade show" role="alert">
+            Please ensure your wallet is always above <strong>Rs.150 at all times!</strong>
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+
+          <h6 class="card-title" style="color: black; margin-bottom: 0px;font-size: larger;font-weight: 900; letter-spacing: 2px;"><span id="walletun"></span></h6>
+          <small id="currentemail"></small>
+          <p class="card-text size11">Current Balance: <h1 id="walletm">0</h1></p>
+
+
+          <div class="alert alert-success" id="addedmoney" role="alert" style="display: none">
+           Money Added successfully!
+          </div>
+
+
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#addmoneymodal">Add Money</button>
+
+					<div class="modal fade" id="addmoneymodal" tabindex="-1" role="dialog" aria-labelledby="addmoneytitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-body">
+
+
+
+                  <form id="addmoney" class="jumbotron">
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <input type="text" class="form-control" id="amount" onkeypress="return /[0-9]/i.test(event.key)" maxLength=4 placeholder="Enter the amount in Rs." required>
+                      </div>
+                    </div>
+                    <div  class="form-row">
+                      <p style="letter-spacing: 5px;font-weight: 700;">SAVED SOURCES</p>
+                      <div id="addmoneycards" class="form-group col-md-12"></div>
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="lowmoneycard" style="display: none">
+                      Insufficient funds! Please use another card
+                    </div>
+                    <div class="alert alert-danger" role="alert" id="wrongcvv" style="display: none">
+                      Incorrect CVV!
+                    </div>
+                    <div class="modal-footer form-row">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">Confirm</button>
+                    </div>
+                  </form>
+
+
+
+
+
+                  <div  class="jumbotron">
+                      <p style="margin: auto;letter-spacing: 5px;font-weight: 700;">NEW SOURCE</p>
+                      <!-- <div class="dropright">
+                        <button class="btn btn-secondary dropdown-toggle" style="margin: 10px" type="button" id="newccarddrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Credit Card
+                        </button>
+                        <div class="alert alert-danger" role="alert" id="invalidcard" style="display: none;font-size: large;font-weight: 600;">
+                            Please fill in all the details!
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="lowmoneycardnew" style="display: none">
+                            Insufficient funds! Please use another card
+                        </div>
+                        <form class="dropdown-menu p-4" id="newsrccard">
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="cardnamenew" style="color: black;">CARD HOLDER NAME:</label>
+                              <input type="text" class="form-control" id="cardnamenew" placeholder="Name" >
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="cardphonenew" style="color: black;">PHONE NO.:</label>
+                              <input type="text" class="form-control" id="cardphonenew" placeholder="Phone no. linked to the account" onkeypress="return /[0-9]/i.test(event.key)" maxlength=10 minlength=10 >
+                              <small style="color: black;">Do not include std code</small>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="cardnonew" style="color: black;">CARD NO:</label>
+                              <input type="text" class="form-control" id="cardnonew" data-type="card-number" placeholder="Card number" onkeypress="return /[0-9]/i.test(event.key)"  maxLength="16" minLength="16">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="exprnew" style="color: black;">EXPR DATE:</label>
+                              <input type="month" class="form-control" id="cardexprnew"  min="2020-04">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="cvvnew" style="color: black;">CVV</label>
+                              <input type="text" class="form-control" id="cvvnew" onkeypress="return /[0-9]/i.test(event.key)"  maxLength="3" minLength="3">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <input type="text" class="form-control" id="amount" onkeypress="return /[0-9]/i.test(event.key)" maxLength=4 placeholder="Enter the amount in Rs." >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input style="margin-left: 2px;" type="checkbox" class="form-check-input" id="ccheck">
+                              <label class="form-check-label" for="ccheck">
+                                Save card
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                          </div>
+                        </form>
+                      </div> -->
+
+
+                      <div class="dropright">
+                        <button class="btn btn-secondary dropdown-toggle" style="margin: 10px" type="button" id="newdcarddrop" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Savings Account
+                        </button>
+                        <div class="alert alert-danger" role="alert" id="invalidacc" style="display: none;font-size: large;font-weight: 600;">
+                            Please fill in all the details!
+                        </div>
+                        <div class="alert alert-danger" role="alert" id="lowmoneyaccnew" style="display: none">
+                            Insufficient funds! Please use another card
+                        </div>
+                        <form class="dropdown-menu p-4" id="newsrcacc" nonvalidate>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="accountnamenew" style="color: black;">CARD HOLDER NAME:</label>
+                              <input type="text" class="form-control" id="accountnamenew" placeholder="Name" >
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="accountphonenew" style="color: black;">PHONE NO.:</label>
+                              <input type="text" class="form-control" id="accountphonenew" placeholder="Phone no. linked to the account" onkeypress="return /[0-9]/i.test(event.key)" maxLength=10 minLength=10 >
+                              <small style="color: black;">Do not include std code</small>
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <label for="accountnonew" style="color: black;">CARD NO:</label>
+                              <input type="text" class="form-control" id="accountnonew" data-type="card-number" placeholder="Card number" onkeypress="return /[0-9]/i.test(event.key)"  maxLength="16" minLength="16">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-6">
+                              <label for="accountexprnew" style="color: black;">EXPR DATE:</label>
+                              <input type="month" class="form-control" id="accountexprnew"  min="2020-04">
+                            </div>
+                            <div class="form-group col-md-6">
+                              <label for="accountcvvnew" style="color: black;">CVV</label>
+                              <input type="text" class="form-control" id="accountcvvnew" onkeypress="return /[0-9]/i.test(event.key)"  maxLength="3" minLength="3">
+                            </div>
+                          </div>
+                          <div class="form-row">
+                            <div class="form-group col-md-12">
+                              <input type="text" class="form-control" id="accountamount" onkeypress="return /[0-9]/i.test(event.key)" maxLength=4 placeholder="Enter the amount in Rs." >
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <div class="form-check">
+                              <input style="margin-left: 2px;" type="checkbox" class="form-check-input" id="dcheck">
+                              <label class="form-check-label" for="dcheck">
+                                Save card
+                              </label>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <button type="submit" class="btn btn-primary">Confirm</button>
+                          </div>
+                        </form>
+                      </div>
+                  </div>
+
+
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+        </div>
+       <!--  <div class="alert alert-success" id="alert-newuser" style="display: none; margin: 10px" role="alert">
+          <h4 class="alert-heading">Welcome!</h4>
+          <p>You have been credited with Rs.200 because you're a new user</p>
+          <hr>
+          <p class="mb-0">Have fun ;)</p>
+        </div> -->
+      </div>
+
+      <div class="jumbotron" id="newcard" style="width: 90%; margin: auto; margin-bottom:50px">
+        <h3 style="font-size: larger">SAVED CREDIT CARDS</h3>
+
+        <!-- Button trigger modal -->
+        <button type="button" class="btn btn-primary" style="margin-bottom: 10px" data-toggle="modal" data-target="#exampleModalCenter">
+          Add Card
+        </button>
+        <div class="alert alert-success" id="addedcard" role="alert" style="display: none">
+         Card Added successfully!
+        </div>
+        <div class="alert alert-danger" role="alert" id="deletedcard" style="display: none">
+          Card Removed Successfully!
+        </div>
+
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalCenterTitle">Add a new card</h5>
+              </div>
+              <div class="modal-body">
+                <form id="new-card">
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="cardname" style="color: black;">CARD HOLDER NAME:</label>
+                      <input type="text" class="form-control" id="cardname" placeholder="Name" required>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="cardphone" style="color: black;">PHONE NO.:</label>
+                      <input type="text" class="form-control" id="cardphone" placeholder="Phone no. linked to the account" onkeypress="return /[0-9]/i.test(event.key)" maxlength=10 minlength=10 required>
+                      <small style="color: black;">STD code not required</small>
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-12">
+                      <label for="cardno" style="color: black;">CARD NO:</label>
+                      <input type="text" class="form-control" id="cardno" data-type="card-number" placeholder="Card number" onkeypress="return /[0-9]/i.test(event.key)" required maxLength="19" minLength="19">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="form-group col-md-6">
+                      <label for="expr" style="color: black;">EXPR DATE:</label>
+                      <input type="month" class="form-control" id="cardexpr" required min="2020-04">
+                    </div>
+                    <div class="form-group col-md-6">
+                      <label for="cvv" style="color: black;">CVV</label>
+                      <input type="text" class="form-control" id="cvv" onkeypress="return /[0-9]/i.test(event.key)" required maxLength="3" minLength="3">
+                    </div>
+                  </div>
+                  <div class="modal-footer form-row">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Save changes</button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+       </div>
+
+
+
+        <div class="jumbotron" id="newaccount" style="width: 90%; margin: auto; margin-bottom:50px">
+          <h3 style="font-size: larger">SAVED ACCOUNTS</h3>
+
+          <!-- Button trigger modal -->
+          <button type="button" class="btn btn-primary" style="margin-bottom: 10px" data-toggle="modal" data-target="#exampleModalCenter1">
+            Add Card
+          </button>
+          <div class="alert alert-success" id="addedaccount" role="alert" style="display: none">
+           Account Added successfully!
+          </div>
+          <div class="alert alert-danger" role="alert" id="deletedaccount" style="display: none">
+            Account Removed Successfully!
+          </div>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle1" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalCenterTitle1">Add a new account</h5>
+                </div>
+                <div class="modal-body">
+                  <form id="new-account">
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="accountname" style="color: black;">CARD HOLDER NAME:</label>
+                        <input type="text" class="form-control" id="accountname" placeholder="Name" required>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="accountphone" style="color: black;">PHONE NO.:</label>
+                        <input type="text" class="form-control" id="accountphone" placeholder="Phone no. linked to the account" onkeypress="return /[0-9]/i.test(event.key)" maxLength=10 minLength=10 required>
+                        <small style="color: black;">Do not include std code</small>
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-12">
+                        <label for="accountno" style="color: black;">CARD NO:</label>
+                        <input type="text" class="form-control" id="accountno" data-type="card-number" placeholder="Card number" onkeypress="return /[0-9]/i.test(event.key)" required maxLength="19" minLength="19">
+                      </div>
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col-md-6">
+                        <label for="accountexpr" style="color: black;">EXPR DATE:</label>
+                        <input type="month" class="form-control" id="accountexpr" required min="2020-04">
+                      </div>
+                      <div class="form-group col-md-6">
+                        <label for="accountcvv" style="color: black;">CVV</label>
+                        <input type="text" class="form-control" id="accountcvv" onkeypress="return /[0-9]/i.test(event.key)" required maxLength="3" minLength="3">
+                      </div>
+                    </div>
+                    <div class="modal-footer form-row">
+                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                      <button type="submit" class="btn btn-primary">SAVE CHANGES</button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+       </div>
+        </section>
+
+
+
+
+
+
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+		<div class="flex-w p-b-90">
+			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+				<h4 class="s-text12 p-b-30">GET IN TOUCH</h4>
+				<div>
+					<p class="s-text7 w-size27">
+						Any questions? Let us know at Amrita School Of Engineering, Bangalore or call us on (+91) 94945 55511
+					</p>
+					<div class="flex-m p-t-30">
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+					</div>
+				</div>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Categories</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Shop</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Book</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Links</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">About Us</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Help</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Track Order</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Returns</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="t-center p-l-15 p-r-15">
+			<a href="#"><img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL"></a>
+			<a href="#"><img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA"></a>
+			<a href="#"><img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD"></a>
+			<a href="#"><img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS"></a>
+			<a href="#"><img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER"></a>
+		</div>
+	</footer>
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div id="dropDownSelect1"></div>
+
+
+
+
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+    <script src="js/main.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+		authDomain: "payment-application-ae819.firebaseapp.com",
+		databaseURL: "https://payment-application-ae819.firebaseio.com",
+		projectId: "payment-application-ae819",
+		storageBucket: "payment-application-ae819.appspot.com",
+		messagingSenderId: "751770368720",
+		appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+		measurementId: "G-9EHEV8DQLD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+  firebase.analytics();
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+
+</script>
+
+
+    <script src="js/popper.min.js"></script>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/loader.js"></script>
+    <script src="js/wallet.js"></script>
+
+    <script type="text/javascript">
+
+      $('[data-type="card-number"]').bind("keyup change", function(e) {
+        if($("#cardno").val().length == 4){
+           document.getElementById('cardno').value =  document.getElementById('cardno').value + " ";
+        }
+        else if(($("#cardno").val().length == 9)){
+          document.getElementById('cardno').value =  document.getElementById('cardno').value + " ";
+        }
+        else if(($("#cardno").val().length == 14)){
+          document.getElementById('cardno').value =  document.getElementById('cardno').value + " ";
+        }
+      });
+
+
+    firebase.auth().onAuthStateChanged(function(user) {
+      db.collection('users').doc(user.uid).get().then(doc => {
+        document.getElementById('navuser').innerHTML = doc.data().name;
+				document.getElementById('num1').innerHTML = doc.data().cartqty;
+      })
+    });
+
+
+
+    </script>
+		<script src="js/home.js"></script>
+</body>
+</html>

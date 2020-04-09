@@ -1,0 +1,4 @@
+ <div id="kyc-alert" class="alert alert-danger" role="alert" style="display:none; font-size: 1rem; margin: 15px 0px; border-radius: 0px; text-align:center;">
+		  <i >:(</i>  Update KYC in Settings
+	</div>
+liste_r1.innerHTML += "<li class='header-cart-item'><div class='header-cart-item-img'><img src='" + doc.data().picloc + "' alt='IMG'></div> <div class='header-cart-item-txt'><a href='#' class='header-cart-item-name'>" + doc.data().name + "</a><span class='header-cart-item-info'>" + (quant*doc.data().money) + "</span></div></li>"
