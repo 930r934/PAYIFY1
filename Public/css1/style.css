@@ -62,7 +62,7 @@ header {
   left: 0;
   width: 100%;
   z-index: 5;
-  padding: 30px }
+ }
 
  header .navbar-brand {
     text-transform: uppercase;

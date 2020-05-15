@@ -17,21 +17,44 @@
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+
 </head>
-<body class="animsition">
+<body class="animsition" >
 	<header class="header1">
 		<div class="container-menu-header">
 			<div class="topbar">
-				<div class="topbar-social"></div>
-				<span class="topbar-child1"></span>
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+				</div>
+
+				<span class="topbar-child1">
+					Free shipping for standard order over Rs1000
+				</span>
+
+				<div class="topbar-child2">
+
+					<span class="topbar-email">
+						teamPayify@example.com
+					</span>
+
+
+				</div>
 			</div>
-			<div class="wrap_header">
+
+
+			<div class="wrap_header" style="background-color:black;">
 				<div class="logo">
 					<img src="images/logo.jpg">
 				</div>
+
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
+
 							<li>
 								<a href="Main-Home.html">Home</a>
 								<ul class="sub_menu">
@@ -40,19 +63,21 @@
 									<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
 								</ul>
 							</li>
-							<li>shop
-								<ul class="sub_menu">
-									<li><a href="Phones.html">Phones</a></li>
+                            <li>
+																<a href="#">Shop</a>
+                                <ul class="sub_menu">
+									<li><a href="phones.html">Phones</a></li>
 									<li><a href="Accessories.html">Accessories</a></li>
 								</ul>
 							</li>
-							<li>Book
-								<ul class="sub_menu">
+							<li>
+									<a href="#">Book</a>
+                                <ul class="sub_menu">
 									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
 									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
 								</ul>
 							</li>
-							<li>Bill
+							<li><a href="#">Bill</a>
 								<ul class="sub_menu">
 									<li><a href="electric-City.html">Electricity</a></li>
 									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
@@ -67,9 +92,388 @@
 						</ul>
 					</nav>
 				</div>
+
+				<div class="header-icons">
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" >
+
+							</ul>
+
+							<div class="header-cart-buttons" >
+									Rs
+									<h2 style="font-family: fantasy;" id="yomoneyb">
+
+										0
+									</h2>
+
+									<!-- Button -->
+
+									<a href="Profile-Management.html" style="width:100%; padding:20px; text-align: center;">
+									Profile Management
+									</a>
+
+									<button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funct123()">
+										Logout
+									</button>
+
+							</div>
+						</div>
+					</div>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti" id='num1'>0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" id="jackS">
+
+							</ul>
+
+							<div class="header-cart-buttons">
+
+									<!-- Button -->
+									<a href="Shopping-Cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
 			</div>
 		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/logo.jpg" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-01.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-02.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-03.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: $75.00
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
+					<span class="hamburger-box" >
+						<span class="hamburger-inner" ></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+ <!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								fashe@example.com
+							</span>
+
+							<div class="topbar-language rs1-select2">
+								<select class="selection-1" name="time">
+									<option>USD</option>
+									<option>EUR</option>
+								</select>
+							</div>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+						<ul class="sub-menu">
+							<li><a href="index.html">Homepage V1</a></li>
+							<li><a href="home-02.html">Homepage V2</a></li>
+							<li><a href="home-03.html">Homepage V3</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Shop</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.html">Features</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="blog.html">Blog</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
 	</header>
+
+
+	<section class="newproduct p-t-45 p-b-50" style="background-image:url('images/joke.gif');">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center" style="font-size:130px;color:white;">MOVIES</h3>
+			</div>
+			<div class="wrap-slick4">
+				<div class="slick4" >
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  						<div class="flip-card-inner" id="Chakka11">
+
+  						</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+							<div class="flip-card-inner" id="Chakka12">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+							<div class="flip-card-inner" id="Chakka13">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+							<div class="flip-card-inner" id="Chakka14">
+
+							</div>
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+							<div class="flip-card-inner" id="Chakka15">
+
+							</div>
+						</div>
+					</div>
+
+
+
+
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<section class="newproduct  p-b-105" style="background-color:transparent;">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center" style="color:white;">Popular Movies</h3>
+			</div>
+			<div class="wrap-slick2">
+				<div class="slick2">
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  						<div class="flip-card-inner" id="Chakka1">
+
+  						</div>
+						</div>
+					</div>
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  <div class="flip-card-inner" id="Chakka2">
+
+  </div>
+</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+	<div class="flip-card-inner" id="Chakka3">
+
+	</div>
+	</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  <div class="flip-card-inner" id="Chakka4">
+
+  </div>
+</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  <div class="flip-card-inner" id="Chakka5">
+
+  </div>
+</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  <div class="flip-card-inner" id="Chakka6">
+
+  </div>
+</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+	<div class="flip-card-inner" id="Chakka7">
+
+	</div>
+	</div>
+					</div>
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="flip-card">
+  <div class="flip-card-inner" id="Chakka8">
+
+  </div>
+</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<button  class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" style="height:100px;width:70%;margin-left:200px;margin-bottom:50px;">
+		Checkout all movies
+	</button>
+
+
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
 		<div class="flex-w p-b-90">
 			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
@@ -129,6 +533,71 @@
 			<a href="#"><img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER"></a>
 		</div>
 	</footer>
+
+	<div class="modal fade" id="myM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;'>
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+
+
+
+		<form id="regForm" action="">
+
+			<h2 id="head"> </h2>
+
+	<!-- One "tab" for each step in the form: -->
+	<div class="tab" id="onehere">
+
+
+	</div>
+
+	<div class="tab" id="twohere">Timings
+		<label class="container1">11:30
+  <input type="radio" checked="checked" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">21:15
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">18:30
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+<label class="container1">19:00
+  <input type="radio" name="radio">
+  <span class="checkmark"></span>
+</label>
+	</div>
+
+
+
+	<div style="overflow:auto;">
+	  <div style="float:right;">
+	    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+	    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+	  </div>
+	</div>
+
+	<!-- Circles which indicates the steps of the form: -->
+	<div style="text-align:center;margin-top:40px;">
+	  <span class="step"></span>
+	  <span class="step"></span>
+
+	</div>
+
+	</form>
+
+
+
+
+
+
+	</div>
+	</div>
+
+
+
 	<div class="btn-back-to-top bg0-hov" id="myBtn">
 		<span class="symbol-btn-back-to-top">
 			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
@@ -165,6 +634,54 @@
 			});
 		});
 	</script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+	<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+		authDomain: "payment-application-ae819.firebaseapp.com",
+		databaseURL: "https://payment-application-ae819.firebaseio.com",
+		projectId: "payment-application-ae819",
+		storageBucket: "payment-application-ae819.appspot.com",
+		messagingSenderId: "751770368720",
+		appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+		measurementId: "G-9EHEV8DQLD"
+
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+		const auth = firebase.auth();
+	  const db = firebase.firestore();
+
+
+	  firebase.auth().onAuthStateChanged(function(user) {
+		  db.collection('users').doc(user.uid).get().then(doc => {
+
+			document.getElementById('num1').innerHTML = doc.data().cartqty;
+		  })
+
+			.catch(function(er){
+				console.log("HERE"+er);
+			})
+
+		});
+
+
+
+
+	</script>
+
+	<script src="js/home.js"></script>
 	<script src="js/main.js"></script>
+	<script src="js/movies.js"></script>
+
+
 </body>
 </html>

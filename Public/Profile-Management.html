@@ -17,6 +17,7 @@
 	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/123main.css">
 
 </head>
 <body class="animsition">
@@ -46,11 +47,11 @@
 			</div>
 
 
-			<div class="wrap_header">
+			<div class="wrap_header" style="background-color:black;">
 				<div class="logo">
 					<img src="images/logo.jpg">
 				</div>
-					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Hey <span id="navuser">user</span>! </strong> </h4>
+
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
@@ -63,21 +64,21 @@
 									<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
 								</ul>
 							</li>
-                            <li>
-																<a>Shop</a>
-                                <ul class="sub_menu">
+														<li>
+																<a href="#">Shop</a>
+																<ul class="sub_menu">
 									<li><a href="Phones.html">Phones</a></li>
 									<li><a href="Accessories.html">Accessories</a></li>
 								</ul>
 							</li>
 							<li>
-									<a>Book</a>
-                                <ul class="sub_menu">
+									<a href="#">Book</a>
+																<ul class="sub_menu">
 									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
 									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
 								</ul>
 							</li>
-							<li><a>Bill</a>
+							<li><a href="#">Bill</a>
 								<ul class="sub_menu">
 									<li><a href="electric-City.html">Electricity</a></li>
 									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
@@ -254,9 +255,9 @@
 					</div>
 				</div>
 
-				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
+					<span class="hamburger-box" >
+						<span class="hamburger-inner" ></span>
 					</span>
 				</div>
 			</div>
@@ -338,9 +339,104 @@
 
 	</header>
 
+	<div class="container-contact100" id="updateuser">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" id="update-user">
+				<span class="contact100-form-title">
+					Profile Management
+				</span>
+
+				<div class="hov-img-zoom1 pos-relative m-b-30 bo-rad-23" style="align-items: center;justify-content: center;background-color: grey;height: 300px;width:300px;margin-left: 120px;" align="center" id="dp-prev">
+					<img src="" alt="IMG-BENNER" class="pict" style="display: none;">
+					<div class="block1-wrapbtn w-size2">
+						<label class="flex-c-m size2 m-text2 bg3 hov1 trans-0-4 bo-rad-23" >
+    					<input type="file" style="display:none;" id="inpfile">
+    						Upload
+							</label>
 
 
-    <section class="bgwhite p-t-66 p-b-38">
+					</div>
+				</div>
+
+				<script>
+
+				const inpFile = document.getElementById("inpfile");
+				const prevc = document.getElementById("dp-prev");
+				const image = prevc.querySelector(".pict");
+				
+
+				inpFile.addEventListener("change",function(){
+					const file = this.files[0];
+
+
+
+					if(file){
+
+						const reader = new FileReader();
+						image.style.display = "block";
+
+						reader.addEventListener("load",function(){
+
+							image.setAttribute("src", this.result);
+
+
+						})
+
+						 reader.readAsDataURL(file);
+					}
+
+				})
+
+				</script>
+
+
+				<h5 style="margin-left:10px; margin-bottom:10px;">Username : </h5>
+				<div id="wrong-details" class="alert alert-danger" role="alert" style="display: none;  margin: 15px 0px;border-radius: 0px;text-align:center;">
+							<i class="fas fa-exclamation-circle"></i> Enter Valid details
+					</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+
+					<input class="input100" type="text" name="name" placeholder="Username" id="newusername" minlength="4" maxlength="12" >
+					<span class="focus-input100"></span>
+				</div>
+				<h5 style="margin-left:10px; margin-bottom:10px;">Date of Birth : </h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+					<input class="input100" type="text" name="email" placeholder="E-mail" id="newdob">
+					<span class="focus-input100"></span>
+				</div>
+				<h5 style="margin-left:10px; margin-bottom:10px;">Password :</h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
+					<input class="input100" type="password" name="phone" placeholder="Phone" id="newpassword">
+					<span class="focus-input100"></span>
+				</div>
+				<h5 style="margin-left:10px; margin-bottom:10px;">Adhaar number :</h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your phone">
+					<input class="input100" onkeypress="return /[0-9]/i.test(event.key)" type="text" name="Adhaar Number" placeholder="Adhaar Number" id="newadhaar" minlength="14" maxLength="14" required>
+					<span class="focus-input100"></span>
+				</div>
+				<h5 style="margin-left:10px; margin-bottom:10px;">Address :</h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your message">
+						<textarea class="input100" name="message" placeholder="Your Address" id="newaddress"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+				<div id="update-details" class="alert alert-success" role="alert" style="display:none; font-size: 1rem; margin: 15px 0px; border-radius: 0px; text-align:center;">
+					Details Updated!
+				</div>
+				<div class="container-contact100-form-btn" style="color=Black;" >
+					<button type="submit" id="update" class="contact100-form-btn m-text2 bg3" >
+						<span >
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Update
+						</span>
+					</button>
+				</div>
+			</form>
+		</div>
+	</div>
+
+
+<!--  <section class="bgwhite p-t-66 p-b-38">
 		<div class="container" id="updateuser">
 			<div class="row">
 				<div class="col-md-4 p-b-30">
@@ -398,7 +494,7 @@
 				</div>
 			</div>
 		</div>
-	</section>
+	</section> -->
 
 
 
@@ -530,7 +626,7 @@
     <script type="text/javascript">
     firebase.auth().onAuthStateChanged(function(user) {
       db.collection('users').doc(user.uid).get().then(doc => {
-        document.getElementById('navuser').innerHTML = doc.data().name;
+
 				document.getElementById('num1').innerHTML = doc.data().cartqty;
       })
     });

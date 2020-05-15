@@ -89,18 +89,20 @@
     ===========================================================*/
     var posWrapHeader = $('.topbar').height();
     var header = $('.container-menu-header');
+    var s1 = $('.bbe');
 
     $(window).on('scroll',function(){
 
         if($(this).scrollTop() >= posWrapHeader) {
             $('.header1').addClass('fixed-header');
             $(header).css('top',-posWrapHeader);
-
+              $(s1).css('margin-top',-posWrapHeader-10);
         }
         else {
             var x = - $(this).scrollTop();
             $(header).css('top',x);
             $('.header1').removeClass('fixed-header');
+            $(s1).css('margin-top',0);
         }
 
         if($(this).scrollTop() >= 200 && $(window).width() > 992) {

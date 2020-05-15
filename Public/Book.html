@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Home</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="vendor/lightbox2/css/lightbox.min.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body class="animsition">
+
+
+	<section style="height:10%; align-content:center;" >
+
+<table>
+	<td>
+	  <button style="width:100px;margin-top:0%;margin-left:199px;visibility: hidden;opacity: 0;" onmouseenter="document.getElementsByClassName('qq')[0].style.visibility = 'visible';document.getElementsByClassName('qq')[0].style.opacity = '1';" onmouseleave="document.getElementsByClassName('qq')[0].style.visibility = 'hidden';document.getElementsByClassName('qq')[0].style.opacity = '0';" class="t-center  qq   flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" onclick="window.location.href = 'phones.html'">
+	    Blub
+	    </button>
+		</td>
+		<td>
+			<button style="width:100px;margin-top:70%;margin-left:412px;visibility: hidden;opacity: 0;" class="flex-c-m  qq size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" onclick="window.location.href = 'accessories.html'">
+	      Acceter
+	      </button>
+			</td>
+			<td>
+			  <button style="width:100px;margin-top:70%;margin-left:199px;visibility: hidden;opacity: 0;" onmouseenter="document.getElementsByClassName('qq')[0].style.visibility = 'visible';document.getElementsByClassName('qq')[0].style.opacity = '1';" onmouseleave="document.getElementsByClassName('qq')[0].style.visibility = 'hidden';document.getElementsByClassName('qq')[0].style.opacity = '0';" class="t-center  qq   flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" onclick="window.location.href = 'phones.html'">
+			    Club
+			    </button>
+				</td>
+</table>
+
+
+
+	</section>
+
+
+
+<section style="height:90%; align-content:center;" >
+
+<div>
+  <button style="width:200px;margin-top:20%;margin-left:40%;" class="t-center    flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" onclick="window.location.href = 'phones.html'" onmouseenter="document.getElementsByClassName('qq')[0].style.visibility = 'visible';document.getElementsByClassName('qq')[1].style.visibility = 'visible';document.getElementsByClassName('qq')[1].style.opacity = '1';document.getElementsByClassName('qq')[0].style.opacity = '1';" onmouseleave="document.getElementsByClassName('qq')[0].style.visibility = 'hidden';document.getElementsByClassName('qq')[1].style.visibility = 'hidden';document.getElementsByClassName('qq')[1].style.opacity = '0';document.getElementsByClassName('qq')[0].style.opacity = '0';">
+    Phones
+    </button>
+    <button style="width:200px;margin-top:20px;margin-left:40%;" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4" onclick="window.location.href = 'accessories.html'">
+      Accessories
+      </button>
+</div>
+
+
+
+</section>
+
+
+
+
+
+
+
+
+
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+	<div id="dropDownSelect1"></div>
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+
+
+
+
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+	<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+		authDomain: "payment-application-ae819.firebaseapp.com",
+		databaseURL: "https://payment-application-ae819.firebaseio.com",
+		projectId: "payment-application-ae819",
+		storageBucket: "payment-application-ae819.appspot.com",
+		messagingSenderId: "751770368720",
+		appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+		measurementId: "G-9EHEV8DQLD"
+
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+		const auth = firebase.auth();
+	  const db = firebase.firestore();
+
+
+	  firebase.auth().onAuthStateChanged(function(user) {
+		  db.collection('users').doc(user.uid).get().then(doc => {
+			document.getElementById('navuser').innerHTML = doc.data().name;
+			document.getElementById('num1').innerHTML = doc.data().cartqty;
+		  })
+
+			.catch(function(er){
+				console.log("HERE"+er);
+			})
+
+		});
+
+
+
+
+	</script>
+
+	<script src="js/main.js"></script>
+
+
+
+
+
+</body>
+</html>

@@ -5,7 +5,7 @@ const samphone = document.querySelector("#this");
 db.collection("Items").doc("phone").collection("phone").doc("phone1").get().then(function(data) {
   if(data.exists)
   {
-    samphone.innerHTML += "<div class='block2'><div class='block2-img wrap-pic-w of-hidden pos-relative'><img src='images/samsungm40.jpg' alt='IMG-PRODUCT'><div class='block2-overlay trans-0-4'><a href='#' class='block2-btn-addwishlist hov-pointer trans-0-4'><i class='icon-wishlist icon_heart_alt' aria-hidden='true'></i><i class='icon-wishlist icon_heart dis-none' aria-hidden='true'></i></a><div class='block2-btn-addcart w-size1 trans-0-4'><button class='flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4'>Add to Cart</button></div></div></div><div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs " + data.data().money  + "</span></div></div>";
+    samphone.innerHTML += "<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs " + data.data().money  + "</span></div></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -200,7 +200,7 @@ function markbordersC(ele)
 }
 function addC(num){
   myFt();
-  setopb();
+
 
   firebase.auth().onAuthStateChanged(function(user) {
   if (user) {
@@ -337,34 +337,3 @@ function myFt() {
     $('.firstBlur').removeClass('modalBlur');
   })
 })
-/*[ Fixed Header ]
-===========================================================*/
-var posWrapHeader = $('.topbar').height();
-var header = $('.container-menu-header');
-
-$(window).on('scroll',function(){
-
-   if($(this).scrollTop() >= posWrapHeader) {
-       $('.header1').addClass('fixed-header');
-       $(header).css('top',-posWrapHeader);
-
-   }
-   else {
-       var x = - $(this).scrollTop();
-       $(header).css('top',x);
-       $('.header1').removeClass('fixed-header');
-   }
-
-   if($(this).scrollTop() >= 200 && $(window).width() > 992) {
-       $('.fixed-header2').addClass('show-fixed-header2');
-       $('.header2').css('visibility','hidden');
-       $('.header2').find('.header-dropdown').removeClass("show-header-dropdown");
-
-   }
-   else {
-       $('.fixed-header2').removeClass('show-fixed-header2');
-       $('.header2').css('visibility','visible');
-       $('.fixed-header2').find('.header-dropdown').removeClass("show-header-dropdown");
-   }
-
-});

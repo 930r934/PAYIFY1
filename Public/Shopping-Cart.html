@@ -48,11 +48,11 @@
 			</div>
 
 
-			<div class="wrap_header">
+			<div class="wrap_header" style="background-color:black;">
 				<div class="logo">
 					<img src="images/logo.jpg">
 				</div>
-					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Hey <span id="navuser">user</span>! </strong> </h4>
+					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
@@ -66,20 +66,20 @@
 								</ul>
 							</li>
                             <li>
-																<a>Shop</a>
+																<a href="#">Shop</a>
                                 <ul class="sub_menu">
 									<li><a href="Phones.html">Phones</a></li>
 									<li><a href="Accessories.html">Accessories</a></li>
 								</ul>
 							</li>
 							<li>
-									<a>Book</a>
+									<a href="#">Book</a>
                                 <ul class="sub_menu">
 									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
 									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
 								</ul>
 							</li>
-							<li><a>Bill</a>
+							<li><a href="#">Bill</a>
 								<ul class="sub_menu">
 									<li><a href="electric-City.html">Electricity</a></li>
 									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
@@ -256,9 +256,9 @@
 					</div>
 				</div>
 
-				<div class="btn-show-menu-mobile hamburger hamburger--squeeze">
-					<span class="hamburger-box">
-						<span class="hamburger-inner"></span>
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
+					<span class="hamburger-box" >
+						<span class="hamburger-inner" ></span>
 					</span>
 				</div>
 			</div>
@@ -341,7 +341,7 @@
 	</header>
 
 	<section class="bg-title-page p-t-40 p-b-50 flex-col-c-m" style="background-image: url(images/heading-pages-01.jpg);">
-		<h2 class="l-text2 t-center">
+		<h2 class="l-text2 t-center" style="color:black;">
 			Cart
 		</h2>
 	</section>
@@ -401,7 +401,7 @@
 					<span class="m-text21 w-size20 w-full-sm" id="finalamt">0.00</span>
 				</div>
 				<div class="size15 trans-0-4">
-					<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4">Proceed to Checkout</button>
+					<button  class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" onclick="boom()">Proceed to Checkout</button>
 				</div>
 			</div>
 		</div>
@@ -476,12 +476,13 @@
 	</div>
 	<div id="dropDownSelect1"></div>
 	<div id="dropDownSelect2"></div>
+	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
 	<script type="text/javascript">
 		$(".selection-1").select2({
 			minimumResultsForSearch: 20,

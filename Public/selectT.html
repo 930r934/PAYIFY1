@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Movie-Ticket</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="icon" type="image/png" href="images/icons/favicon.png"/>
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/themify/themify-icons.css">
+	<link rel="stylesheet" type="text/css" href="fonts/Linearicons-Free-v1.0.0/icon-font.min.css">
+	<link rel="stylesheet" type="text/css" href="fonts/elegant-font/html-css/style.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+	<link rel="stylesheet" type="text/css" href="vendor/slick/slick.css">
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/tick.css">
+</head>
+<body class="animsition">
+	<header class="header1">
+		<div class="container-menu-header">
+			<div class="topbar">
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+				</div>
+
+				<span class="topbar-child1">
+					Free shipping for standard order over Rs1000
+				</span>
+
+				<div class="topbar-child2">
+
+					<span class="topbar-email">
+						teamPayify@example.com
+					</span>
+
+
+				</div>
+			</div>
+
+
+			<div class="wrap_header" style="background-color:black;">
+				<div class="logo">
+					<img src="images/logo.jpg">
+				</div>
+					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+
+							<li>
+								<a href="Main-Home.html">Home</a>
+								<ul class="sub_menu">
+									<li><a href="Profile-Management.html">Profile Management</a></li>
+									<li><a href="Wallet-Management.html">Wallet Management</a></li>
+									<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
+								</ul>
+							</li>
+                            <li>
+																<a href="#">Shop</a>
+                                <ul class="sub_menu">
+									<li><a href="phones.html">Phones</a></li>
+									<li><a href="Accessories.html">Accessories</a></li>
+								</ul>
+							</li>
+							<li>
+									<a href="#">Book</a>
+                                <ul class="sub_menu">
+									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
+									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Bill</a>
+								<ul class="sub_menu">
+									<li><a href="electric-City.html">Electricity</a></li>
+									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="Help.html">Help</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-icons">
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" >
+
+							</ul>
+
+							<div class="header-cart-buttons" >
+									Rs
+									<h2 style="font-family: fantasy;" id="yomoneyb">
+
+										0
+									</h2>
+
+									<!-- Button -->
+
+									<a href="Profile-Management.html" style="width:100%; padding:20px; text-align: center;">
+									Profile Management
+									</a>
+
+									<button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funct123()">
+										Logout
+									</button>
+
+							</div>
+						</div>
+					</div>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti" id='num1'>0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" id="jackS">
+
+							</ul>
+
+							<div class="header-cart-buttons">
+
+									<!-- Button -->
+									<a href="Shopping-Cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/logo.jpg" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-01.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-02.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-03.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: $75.00
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
+					<span class="hamburger-box" >
+						<span class="hamburger-inner" ></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+ <!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								fashe@example.com
+							</span>
+
+							<div class="topbar-language rs1-select2">
+								<select class="selection-1" name="time">
+									<option>USD</option>
+									<option>EUR</option>
+								</select>
+							</div>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+						<ul class="sub-menu">
+							<li><a href="index.html">Homepage V1</a></li>
+							<li><a href="home-02.html">Homepage V2</a></li>
+							<li><a href="home-03.html">Homepage V3</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Shop</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.html">Features</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="blog.html">Blog</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+	</header>
+
+
+
+<section style="height:900px;overflow-x: hidden;">
+	<h3 class="m-text5 t-center" style="color:white;">Select your seats</h3>
+	<div class="screen t-center">
+			SCREEN
+			<p id="moviename">Wait</p>
+	</div>
+
+	<div class="theatre" style="top:600px;">
+
+  <div class="cinema-seats left">
+    <div class="cinema-row row-1">
+      <div id="1" class="seat" onclick="myFunction('1');"></div>
+      <div id="2" class="seat" onclick="myFunction('2');"></div>
+      <div id="3" class="seat" onclick="myFunction('3');"></div>
+      <div id="4" class="seat" onclick="myFunction('4');"></div>
+      <div id="5" class="seat" onclick="myFunction('5');"></div>
+      <div id="6" class="seat" onclick="myFunction('6');"></div>
+      <div id="7" class="seat" onclick="myFunction('7');"></div>
+    </div>
+
+
+    <div class="cinema-row row-2">
+      <div id="8" class="seat" onclick="myFunction('8');"></div>
+      <div id="9" class="seat" onclick="myFunction('9');"></div>
+      <div id="10" class="seat" onclick="myFunction('10');"></div>
+      <div id="11" class="seat" onclick="myFunction('11');"></div>
+      <div id="12" class="seat" onclick="myFunction('12');"></div>
+      <div id="13" class="seat" onclick="myFunction('13');"></div>
+      <div id="14" class="seat" onclick="myFunction('14');"></div>
+    </div>
+
+    <div class="cinema-row row-3">
+      <div id="15" class="seat" onclick="myFunction('15');"></div>
+      <div id="16" class="seat" onclick="myFunction('16');"></div>
+      <div id="17" class="seat" onclick="myFunction('17');"></div>
+      <div id="18" class="seat" onclick="myFunction('18');"></div>
+      <div id="19" class="seat" onclick="myFunction('19');"></div>
+      <div id="20" class="seat" onclick="myFunction('20');"></div>
+      <div id="21" class="seat" onclick="myFunction('21');"></div>
+    </div>
+
+    <div class="cinema-row row-4">
+      <div id="22" class="seat" onclick="myFunction('22');"></div>
+      <div id="23" class="seat" onclick="myFunction('23');"></div>
+      <div id="24" class="seat" onclick="myFunction('24');"></div>
+      <div id="25" class="seat" onclick="myFunction('25');"></div>
+      <div id="26" class="seat" onclick="myFunction('26');"></div>
+      <div id="27" class="seat" onclick="myFunction('27');"></div>
+      <div id="28" class="seat" onclick="myFunction('28');"></div>
+    </div>
+
+    <div class="cinema-row row-5">
+      <div id="29" class="seat" onclick="myFunction('29');"></div>
+      <div id="30" class="seat" onclick="myFunction('30');"></div>
+      <div id="31" class="seat" onclick="myFunction('31');"></div>
+      <div id="32" class="seat" onclick="myFunction('32');"></div>
+      <div id="33" class="seat" onclick="myFunction('33');"></div>
+      <div id="34" class="seat" onclick="myFunction('34');"></div>
+      <div id="35" class="seat" onclick="myFunction('35');"></div>
+    </div>
+
+    <div class="cinema-row row-6">
+      <div id="36" class="seat" onclick="myFunction('36');"></div>
+      <div id="37" class="seat" onclick="myFunction('37');"></div>
+      <div id="38" class="seat" onclick="myFunction('38');"></div>
+      <div id="39" class="seat" onclick="myFunction('39');"></div>
+      <div id="40" class="seat" onclick="myFunction('40');"></div>
+      <div id="41" class="seat" onclick="myFunction('41');"></div>
+      <div id="42" class="seat" onclick="myFunction('42');"></div>
+    </div>
+
+    <div class="cinema-row row-7">
+			<div id="43" class="seat" onclick="myFunction('43');"></div>
+      <div id="44" class="seat" onclick="myFunction('44');"></div>
+      <div id="45" class="seat" onclick="myFunction('45');"></div>
+      <div id="46" class="seat" onclick="myFunction('46');"></div>
+      <div id="47" class="seat" onclick="myFunction('47');"></div>
+      <div id="48" class="seat" onclick="myFunction('48');"></div>
+      <div id="49" class="seat" onclick="myFunction('49');"></div>
+    </div>
+
+
+  </div>
+
+
+  <div class="cinema-seats right">
+		<div class="cinema-row row-1">
+      <div id="50" class="seat" onclick="myFunction('50');"></div>
+      <div id="51" class="seat" onclick="myFunction('51');"></div>
+      <div id="52" class="seat" onclick="myFunction('52');"></div>
+      <div id="53" class="seat" onclick="myFunction('53');"></div>
+      <div id="54" class="seat" onclick="myFunction('54');"></div>
+      <div id="55" class="seat" onclick="myFunction('55');"></div>
+      <div id="56" class="seat" onclick="myFunction('56');"></div>
+    </div>
+
+
+    <div class="cinema-row row-2">
+      <div id="57" class="seat" onclick="myFunction('57');"></div>
+      <div id="58" class="seat" onclick="myFunction('58');"></div>
+      <div id="59" class="seat" onclick="myFunction('59');"></div>
+      <div id="60" class="seat" onclick="myFunction('60');"></div>
+      <div id="61" class="seat" onclick="myFunction('61');"></div>
+      <div id="62" class="seat" onclick="myFunction('62');"></div>
+      <div id="63" class="seat" onclick="myFunction('63');"></div>
+    </div>
+
+    <div class="cinema-row row-3">
+      <div id="64" class="seat" onclick="myFunction('64');"></div>
+      <div id="65" class="seat" onclick="myFunction('65');"></div>
+      <div id="66" class="seat" onclick="myFunction('66');"></div>
+      <div id="67" class="seat" onclick="myFunction('67');"></div>
+      <div id="68" class="seat" onclick="myFunction('68');"></div>
+      <div id="69" class="seat" onclick="myFunction('69');"></div>
+      <div id="70" class="seat" onclick="myFunction('70');"></div>
+    </div>
+
+    <div class="cinema-row row-4">
+      <div id="71" class="seat" onclick="myFunction('71');"></div>
+      <div id="72" class="seat" onclick="myFunction('72');"></div>
+      <div id="73" class="seat" onclick="myFunction('73');"></div>
+      <div id="74" class="seat" onclick="myFunction('74');"></div>
+      <div id="75" class="seat" onclick="myFunction('75');"></div>
+      <div id="76" class="seat" onclick="myFunction('76');"></div>
+      <div id="77" class="seat" onclick="myFunction('77');"></div>
+    </div>
+
+    <div class="cinema-row row-5">
+      <div id="78" class="seat" onclick="myFunction('78');"></div>
+      <div id="79" class="seat" onclick="myFunction('79');"></div>
+      <div id="80" class="seat" onclick="myFunction('80');"></div>
+      <div id="81" class="seat" onclick="myFunction('81');"></div>
+      <div id="82" class="seat" onclick="myFunction('82');"></div>
+      <div id="83" class="seat" onclick="myFunction('83');"></div>
+      <div id="84" class="seat" onclick="myFunction('84');"></div>
+    </div>
+
+    <div class="cinema-row row-6">
+      <div id="85" class="seat" onclick="myFunction('85');"></div>
+      <div id="86" class="seat" onclick="myFunction('86');"></div>
+      <div id="87" class="seat" onclick="myFunction('87');"></div>
+      <div id="88" class="seat" onclick="myFunction('88');"></div>
+      <div id="89" class="seat" onclick="myFunction('89');"></div>
+      <div id="90" class="seat" onclick="myFunction('90');"></div>
+      <div id="91" class="seat" onclick="myFunction('91');"></div>
+    </div>
+
+    <div class="cinema-row row-7">
+			<div id="92" class="seat" onclick="myFunction('92');"></div>
+      <div id="93" class="seat" onclick="myFunction('93');"></div>
+      <div id="94" class="seat" onclick="myFunction('94');"></div>
+      <div id="95" class="seat" onclick="myFunction('95');"></div>
+      <div id="96" class="seat" onclick="myFunction('96');"></div>
+      <div id="97" class="seat" onclick="myFunction('97');"></div>
+      <div id="98" class="seat" onclick="myFunction('98');"></div>
+    </div>
+</div>
+
+
+
+</div>
+<div class="jj" id="seatnos"  style="top:150px;left:0%;color:white;position: fixed;" >
+No of Seats:
+	<h1 id="seato" style="color:white;">Rs120 x0</h1>
+
+</div>
+
+</div>
+<div class="t-right jj" style="position: fixed;top:150px;left:88%;color:white; " >
+Total:
+	<h1 id="seati" style="color:white;">0</h1>
+
+</div>
+<h2 class="t-left" style="position: relative;top:530px;left:800px;display: block;color:white" >Right side</h2>
+<h2 class="t-left" style="position: relative;top:500px;left:310px;display: block;color:white" >Left side</h2>
+<div style="display:block;">
+<a class="t-center flex-c-m bg1 bo-rad-20 hov1 s-text1 trans-0-4" style="width: 350px;position: relative;top:560px;left:2vw;display: block;color:white" >Go back!</a>
+<a class="t-center flex-c-m  bg1 bo-rad-20 hov1 s-text1 trans-0-4"  style="width:350px;position: relative;top:512px;left:70vw;display: block;color:white" onclick="blub();">Continue!</a>
+</div>
+</section>
+
+
+
+
+
+	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
+		<div class="flex-w p-b-90">
+			<div class="w-size6 p-t-30 p-l-15 p-r-15 respon3">
+				<h4 class="s-text12 p-b-30">GET IN TOUCH</h4>
+                <div>
+					<p class="s-text7 w-size27">
+						Any questions? Let us know at Amrita School Of Engineering, Bangalore or call us on (+91) 94945 55511
+					</p>
+					<div class="flex-m p-t-30">
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-facebook"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-instagram"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-pinterest-p"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-snapchat-ghost"></a>
+						<a href="#" class="fs-18 color1 p-r-20 fa fa-youtube-play"></a>
+					</div>
+				</div>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Categories</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Shop</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Book</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Links</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">About Us</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Contact Us</a>
+					</li>
+				</ul>
+			</div>
+			<div class="w-size7 p-t-30 p-l-15 p-r-15 respon4">
+				<h4 class="s-text12 p-b-30">Help</h4>
+				<ul>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Track Order</a>
+					</li>
+					<li class="p-b-9">
+						<a href="#" class="s-text7">Returns</a>
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="t-center p-l-15 p-r-15">
+			<a href="#"><img class="h-size2" src="images/icons/paypal.png" alt="IMG-PAYPAL"></a>
+			<a href="#"><img class="h-size2" src="images/icons/visa.png" alt="IMG-VISA"></a>
+			<a href="#"><img class="h-size2" src="images/icons/mastercard.png" alt="IMG-MASTERCARD"></a>
+			<a href="#"><img class="h-size2" src="images/icons/express.png" alt="IMG-EXPRESS"></a>
+			<a href="#"><img class="h-size2" src="images/icons/discover.png" alt="IMG-DISCOVER"></a>
+		</div>
+	</footer>
+
+	<div class="btn-back-to-top bg0-hov" id="myBtn">
+		<span class="symbol-btn-back-to-top">
+			<i class="fa fa-angle-double-up" aria-hidden="true"></i>
+		</span>
+	</div>
+
+
+	<div class="modal fade" id="myM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;'>
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+
+
+
+		<form id="regForm" style="background: white;"action="">
+
+			<h2 id="head" >OOPS!</h2>
+			<p style="padding-bottom:50px;"> You do not have sufficient balance in your wallet! </p>
+
+	<!-- One "tab" for each step in the form: -->
+	<button type="button" class="flex-c-m size2 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="window.location='Wallet-Management.html';">
+		Add money to wallet!
+	</button>
+</br>
+<button type="button" class="flex-c-m size2 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funk()">
+	Pay remaining from card!
+</button>
+
+	</form>
+
+
+
+
+
+
+	</div>
+	</div>
+
+
+
+
+	<div class="modal fade" id="myM2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;'>
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+
+
+
+		<form id="regForm1" style="background: white;padding: 60px;" action="">
+
+
+			<p style="padding-bottom:50px;" id="ki"> You do not have sufficient balance in your wallet! </p>
+
+			<div class="tab" id="onehere">
+
+
+				<label class="container1" >Add a Card
+		  <input type="radio" checked="checked" name="radio">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container1">Choose existing card
+		  <input type="radio" name="radio">
+		  <span class="checkmark"></span>
+		</label>
+
+			</div>
+
+			<div class="tab" id="twohere">
+
+
+
+
+
+			</div>
+
+
+			<div class="tab" id="threehere">
+				<div class="row">
+
+  </div><!--row end-->
+  <div class="row">
+    <div class="col-xs-5">
+      <i class="fa fa fa-user"></i>
+      <label for="cardholder">Cardholder's Name</label>
+
+
+			<input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" id="cardholder" >
+
+    </div><!--col-xs-5-->
+    <div class="col-xs-5">
+      <i class="fa fa-credit-card-alt"></i>
+      <label for="cardnumber">Card Number</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;" type="text" id="cardnumber" onkeypress="return /[0-9]/i.test(event.key)">
+    </div><!--col-xs-5-->
+  </div><!--row end-->
+  <div class="row row-three">
+    <div class="col-xs-2">
+      <i class="fa fa-calendar"></i>
+      <label for="date">Valid thru</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" placeholder="YY-MM" id="date" >
+    </div><!--col-xs-3-->
+    <div class="col-xs-2">
+      <i class="fa fa-lock"></i>
+      <label for="date">CVV / CVC *</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" maxLength="3" minLength="3" id="cvv">
+    </div><!--col-xs-3-->
+    <div class="col-xs-5">
+      <span class="small">* CVV or CVC is the card security code, unique three digits number on the back of your card seperate from its number.</span>
+    </div><!--col-xs-6 end-->
+  </div><!--row end-->
+
+
+
+
+
+			</div>
+
+			<div style="overflow:auto;">
+			  <div style="float:right;">
+			    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+			    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+			  </div>
+			</div>
+
+			<!-- Circles which indicates the steps of the form: -->
+			<div style="text-align:center;margin-top:40px;">
+			  <span class="step"></span>
+			  <span class="step"></span>
+				<span class="step"></span>
+			</div>
+
+
+	</form>
+
+
+
+
+
+
+	</div>
+	</div>
+
+
+
+
+
+
+
+	<div id="dropDownSelect1"></div>
+	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
+	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.min.js"></script>
+
+	<script type="text/javascript">
+		$(".selection-1").select2({
+			minimumResultsForSearch: 20,
+			dropdownParent: $('#dropDownSelect1')
+		});
+	</script>
+	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
+	<script type="text/javascript" src="js/slick-custom.js"></script>
+	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
+	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
+	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+
+	<script type="text/javascript">
+		$('.block2-btn-addcart').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to cart !", "success");
+			});
+		});
+		$('.block2-btn-addwishlist').each(function(){
+			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
+			$(this).on('click', function(){
+				swal(nameProduct, "is added to wishlist !", "success");
+			});
+		});
+	</script>
+
+
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+	<!-- TODO: Add SDKs for Firebase products that you want to use
+		 https://firebase.google.com/docs/web/setup#available-libraries -->
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+	<script>
+	var firebaseConfig = {
+		apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+		authDomain: "payment-application-ae819.firebaseapp.com",
+		databaseURL: "https://payment-application-ae819.firebaseio.com",
+		projectId: "payment-application-ae819",
+		storageBucket: "payment-application-ae819.appspot.com",
+		messagingSenderId: "751770368720",
+		appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+		measurementId: "G-9EHEV8DQLD"
+
+	  };
+	  // Initialize Firebase
+	  firebase.initializeApp(firebaseConfig);
+	  firebase.analytics();
+		const auth = firebase.auth();
+	  const db = firebase.firestore();
+
+
+	  firebase.auth().onAuthStateChanged(function(user) {
+		  db.collection('users').doc(user.uid).get().then(doc => {
+			document.getElementById('navuser').innerHTML = doc.data().name;
+			document.getElementById('num1').innerHTML = doc.data().cartqty;
+		  })
+
+			.catch(function(er){
+				console.log("HERE"+er);
+			})
+
+		});
+
+
+
+
+	</script>
+
+	<script src="js/ticket.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/main.js"></script>
+
+
+
+</body>
+</html>

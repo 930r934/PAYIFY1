@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<title>Contact V10</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/123main.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+
+<!--===============================================================================================-->
+</head>
+<body class="animsition">
+	<header class="header1">
+		<div class="container-menu-header">
+			<div class="topbar">
+				<div class="topbar-social">
+					<a href="#" class="topbar-social-item fa fa-facebook"></a>
+					<a href="#" class="topbar-social-item fa fa-instagram"></a>
+					<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+					<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+					<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+				</div>
+
+				<span class="topbar-child1">
+					Free shipping for standard order over Rs1000
+				</span>
+
+				<div class="topbar-child2">
+
+					<span class="topbar-email">
+						teamPayify@example.com
+					</span>
+
+
+				</div>
+			</div>
+
+
+			<div class="wrap_header" style="background-color:black;">
+				<div class="logo">
+					<img src="images/logo.jpg">
+				</div>
+
+				<div class="wrap_menu">
+					<nav class="menu">
+						<ul class="main_menu">
+
+							<li>
+								<a href="Main-Home.html">Home</a>
+								<ul class="sub_menu">
+									<li><a href="Profile-Management.html">Profile Management</a></li>
+									<li><a href="Wallet-Management.html">Wallet Management</a></li>
+									<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
+								</ul>
+							</li>
+                            <li>
+																<a href="#">Shop</a>
+                                <ul class="sub_menu">
+									<li><a href="Phones.html">Phones</a></li>
+									<li><a href="Accessories.html">Accessories</a></li>
+								</ul>
+							</li>
+							<li>
+									<a href="#">Book</a>
+                                <ul class="sub_menu">
+									<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
+									<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Bill</a>
+								<ul class="sub_menu">
+									<li><a href="electric-City.html">Electricity</a></li>
+									<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
+								</ul>
+							</li>
+							<li>
+								<a href="about.html">About</a>
+							</li>
+							<li>
+								<a href="Help.html">Help</a>
+							</li>
+						</ul>
+					</nav>
+				</div>
+
+				<div class="header-icons">
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" >
+
+							</ul>
+
+							<div class="header-cart-buttons" >
+									Rs
+									<h2 style="font-family: fantasy;" id="yomoneyb">
+
+										0
+									</h2>
+
+									<!-- Button -->
+
+									<a href="Profile-Management.html" style="width:100%; padding:20px; text-align: center;">
+									Profile Management
+									</a>
+
+									<button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funct123()">
+										Logout
+									</button>
+
+							</div>
+						</div>
+					</div>
+
+					<span class="linedivide1"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti" id='num1'>0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" id="jackS">
+
+							</ul>
+
+							<div class="header-cart-buttons">
+
+									<!-- Button -->
+									<a href="Shopping-Cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+
+							</div>
+						</div>
+					</div>
+				</div>
+
+
+
+
+
+
+			</div>
+		</div>
+
+		<!-- Header Mobile -->
+		<div class="wrap_header_mobile">
+			<!-- Logo moblie -->
+			<a href="index.html" class="logo-mobile">
+				<img src="images/logo.jpg" alt="IMG-LOGO">
+			</a>
+
+			<!-- Button show menu -->
+			<div class="btn-show-menu">
+				<!-- Header Icon mobile -->
+				<div class="header-icons-mobile">
+					<a href="#" class="header-wrapicon1 dis-block">
+						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
+					</a>
+
+					<span class="linedivide2"></span>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+						<span class="header-icons-noti">0</span>
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown">
+							<ul class="header-cart-wrapitem">
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-01.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											White Shirt With Pleat Detail Back
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $19.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-02.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Converse All Star Hi Black Canvas
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $39.00
+										</span>
+									</div>
+								</li>
+
+								<li class="header-cart-item">
+									<div class="header-cart-item-img">
+										<img src="images/item-cart-03.jpg" alt="IMG">
+									</div>
+
+									<div class="header-cart-item-txt">
+										<a href="#" class="header-cart-item-name">
+											Nixon Porter Leather Watch In Tan
+										</a>
+
+										<span class="header-cart-item-info">
+											1 x $17.00
+										</span>
+									</div>
+								</li>
+							</ul>
+
+							<div class="header-cart-total">
+								Total: $75.00
+							</div>
+
+							<div class="header-cart-buttons">
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										View Cart
+									</a>
+								</div>
+
+								<div class="header-cart-wrapbtn">
+									<!-- Button -->
+									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+										Check Out
+									</a>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
+					<span class="hamburger-box" >
+						<span class="hamburger-inner" ></span>
+					</span>
+				</div>
+			</div>
+		</div>
+
+
+ <!-- Menu Mobile -->
+		<div class="wrap-side-menu" >
+			<nav class="side-menu">
+				<ul class="main-menu">
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<span class="topbar-child1">
+							Free shipping for standard order over $100
+						</span>
+					</li>
+
+					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
+						<div class="topbar-child2-mobile">
+							<span class="topbar-email">
+								fashe@example.com
+							</span>
+
+							<div class="topbar-language rs1-select2">
+								<select class="selection-1" name="time">
+									<option>USD</option>
+									<option>EUR</option>
+								</select>
+							</div>
+						</div>
+					</li>
+
+					<li class="item-topbar-mobile p-l-10">
+						<div class="topbar-social-mobile">
+							<a href="#" class="topbar-social-item fa fa-facebook"></a>
+							<a href="#" class="topbar-social-item fa fa-instagram"></a>
+							<a href="#" class="topbar-social-item fa fa-pinterest-p"></a>
+							<a href="#" class="topbar-social-item fa fa-snapchat-ghost"></a>
+							<a href="#" class="topbar-social-item fa fa-youtube-play"></a>
+						</div>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="index.html">Home</a>
+						<ul class="sub-menu">
+							<li><a href="index.html">Homepage V1</a></li>
+							<li><a href="home-02.html">Homepage V2</a></li>
+							<li><a href="home-03.html">Homepage V3</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Shop</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="product.html">Sale</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="cart.html">Features</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="blog.html">Blog</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="about.html">About</a>
+					</li>
+
+					<li class="item-menu-mobile">
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+			</nav>
+		</div>
+
+
+	</header>
+
+	<div class="container-contact100" id="updateuser">
+
+		<div class="wrap-contact100">
+			<form class="contact100-form validate-form" id="update-user">
+				<span class="contact100-form-title">
+					Check Out
+				</span>
+
+				<h5 style="margin-left:10px; margin-bottom:10px;">Name : </h5>
+				<div id="wrong-details" class="alert alert-danger" role="alert" style="display: none;  margin: 15px 0px;border-radius: 0px;text-align:center;">
+							<i class="fas fa-exclamation-circle"></i> Enter Valid details
+					</div>
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+
+					<input class="input100" type="text" name="name" placeholder="Username" id="newusername" minlength="4" maxlength="12" >
+					<span class="focus-input100"></span>
+				</div>
+				<h5 style="margin-left:10px; margin-bottom:10px;">Email Id : </h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your email: e@a.x">
+					<input class="input100" type="text" name="email" placeholder="E-mail" id="emailid">
+					<span class="focus-input100"></span>
+				</div>
+
+				<h5 style="margin-left:10px; margin-bottom:10px;">Phone Number : </h5>
+				<div class="wrap-input100 validate-input"  data-validate = "Please enter your Phone number">
+					<input class="input100" type="number" name="Phonenumber" placeholder="+91" id="number" length="10">
+					<span class="focus-input100"></span>
+				</div>
+
+				<h5 style="margin-left:10px; margin-bottom:10px;">PIN number : </h5>
+				<div class="wrap-input100 validate-input"  data-validate = "Please enter your PIN number">
+					<input class="input100" type="text" name="Phonenumber" placeholder="5600--" id="number" length="6">
+					<span class="focus-input100"></span>
+				</div>
+
+				<h5 style="margin-left:10px; margin-bottom:10px;">Address :</h5>
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your address">
+						<textarea class="input100" name="message" placeholder="Your Address" id="newaddress"></textarea>
+					<span class="focus-input100"></span>
+				</div>
+				<div id="update-details" class="alert alert-success" role="alert" style="display:none; font-size: 1rem; margin: 15px 0px; border-radius: 0px; text-align:center;">
+					Details Updated!
+				</div>
+
+
+
+				<table style="padding-top: 30px;">
+
+				<span class="contact100-form-title" style="text-align:left;">
+					ITEMS :
+				</span>
+			</br>
+			<td>
+			<div id="Items">
+
+
+				</span>
+			</div>
+		</td>
+		<td style="padding-left: 70%;" id="qty">
+		</td>
+	</br>
+
+			</table>
+
+
+
+
+
+				<table style="margin-top: 90px;">
+					<td>
+				<span class="contact100-form-title" style="text-align:left;">
+					Wallet :
+				</span>
+
+
+				<span class="contact100-form-title" style="text-align:left;margin-top: 70px;">
+					Total :
+				</span>
+			</td>
+			<td style="padding-left: 30px;">
+			<!--	<i class="fa fa-rupee-sign"></i> -->
+				<span class="contact100-form-title" style="text-align:right;padding-left: 120%;" id="yomoneyb1">
+
+					0
+				</span>
+
+				<span class="contact100-form-title" style="text-align:right;padding-left: 120%;margin-top: 70px;" id="yomoneyb2">
+
+					0
+				</span>
+			</td>
+
+			</table>
+
+
+				<div class="container-contact100-form-btn" style="color=Black;" >
+					<button type="button" id="update" class="contact100-form-btn m-text2 bg3" >
+						<span >
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							Checkout with wallet!
+						</span>
+					</button>
+				</div>
+
+
+
+
+			</form>
+		</div>
+	</div>
+
+	<div class="modal fade" id="myM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;'>
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+
+
+
+		<form id="regForm" style="background: white;"action="">
+
+			<h2 id="head" >OOPS!</h2>
+			<p style="padding-bottom:50px;"> You do not have sufficient balance in your wallet! </p>
+
+	<!-- One "tab" for each step in the form: -->
+	<button type="button" class="flex-c-m size2 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="window.location='Wallet-Management.html';">
+		Add money to wallet!
+	</button>
+</br>
+<button type="button" class="flex-c-m size2 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funk()">
+	Pay remaining from card!
+</button>
+
+	</form>
+
+
+
+
+
+
+	</div>
+	</div>
+
+
+	<div class="modal fade" id="myM2" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;'>
+	<div class="modal-dialog">
+
+	<!-- Modal content-->
+
+
+
+		<form id="regForm1" style="background: white;padding: 60px;" action="">
+
+
+			<p style="padding-bottom:50px;" id="ki"> You do not have sufficient balance in your wallet! </p>
+
+			<div class="tab" id="onehere">
+
+
+				<label class="container1" >Add a Card
+		  <input type="radio" checked="checked" name="radio">
+		  <span class="checkmark"></span>
+		</label>
+		<label class="container1">Choose existing card
+		  <input type="radio" name="radio">
+		  <span class="checkmark"></span>
+		</label>
+
+			</div>
+
+			<div class="tab" id="twohere">
+
+
+
+
+
+			</div>
+
+
+			<div class="tab" id="threehere">
+				<div class="row">
+
+  </div><!--row end-->
+  <div class="row">
+    <div class="col-xs-5">
+      <i class="fa fa fa-user"></i>
+      <label for="cardholder">Cardholder's Name</label>
+
+
+			<input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" id="cardholder" >
+
+    </div><!--col-xs-5-->
+    <div class="col-xs-5">
+      <i class="fa fa-credit-card-alt"></i>
+      <label for="cardnumber">Card Number</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;" type="text" id="cardnumber" onkeypress="return /[0-9]/i.test(event.key)">
+    </div><!--col-xs-5-->
+  </div><!--row end-->
+  <div class="row row-three">
+    <div class="col-xs-2">
+      <i class="fa fa-calendar"></i>
+      <label for="date">Valid thru</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" placeholder="YY-MM" id="date" >
+    </div><!--col-xs-3-->
+    <div class="col-xs-2">
+      <i class="fa fa-lock"></i>
+      <label for="date">CVV / CVC *</label>
+      <input class="input100" style="height:30px;background:#e9e7e7;color:black;;" type="text" maxLength="3" minLength="3" id="cvv">
+    </div><!--col-xs-3-->
+    <div class="col-xs-5">
+      <span class="small">* CVV or CVC is the card security code, unique three digits number on the back of your card seperate from its number.</span>
+    </div><!--col-xs-6 end-->
+  </div><!--row end-->
+
+
+
+
+
+			</div>
+
+			<div style="overflow:auto;">
+			  <div style="float:right;">
+			    <button type="button" id="prevBtn" onclick="nextPrev(-1)">Previous</button>
+			    <button type="button" id="nextBtn" onclick="nextPrev(1)">Next</button>
+			  </div>
+			</div>
+
+			<!-- Circles which indicates the steps of the form: -->
+			<div style="text-align:center;margin-top:40px;">
+			  <span class="step"></span>
+			  <span class="step"></span>
+				<span class="step"></span>
+			</div>
+
+
+	</form>
+
+
+
+
+
+
+	</div>
+	</div>
+
+
+	<div id="dropDownSelect1"></div>
+
+<!--===============================================================================================-->
+	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/animsition/js/animsition.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/bootstrap/js/popper.js"></script>
+	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/select2/select2.min.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/daterangepicker/moment.min.js"></script>
+	<script src="vendor/daterangepicker/daterangepicker.js"></script>
+<!--===============================================================================================-->
+	<script src="vendor/countdowntime/countdowntime.js"></script>
+<!--===============================================================================================-->
+	<script src="js/main.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@9.10.12/dist/sweetalert2.all.min.js"></script>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-23581568-13"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-23581568-13');
+</script>
+
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+	 https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+<script>
+var firebaseConfig = {
+	apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+	authDomain: "payment-application-ae819.firebaseapp.com",
+	databaseURL: "https://payment-application-ae819.firebaseio.com",
+	projectId: "payment-application-ae819",
+	storageBucket: "payment-application-ae819.appspot.com",
+	messagingSenderId: "751770368720",
+	appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+	measurementId: "G-9EHEV8DQLD"
+
+	};
+	// Initialize Firebase
+	firebase.initializeApp(firebaseConfig);
+	firebase.analytics();
+	const auth = firebase.auth();
+	const db = firebase.firestore();
+
+
+	firebase.auth().onAuthStateChanged(function(user) {
+		db.collection('users').doc(user.uid).get().then(doc => {
+
+		document.getElementById('num1').innerHTML = doc.data().cartqty;
+
+		})
+
+
+		.catch(function(er){
+			console.log("HERE"+er);
+		})
+		db.collection('users').doc(user.uid).collection("wallet").doc("wallet").get().then(doc => {
+
+		document.getElementById('yomoneyb1').firstChild.nodeValue = doc.data().balance;
+
+		})
+
+
+	});
+
+
+
+
+</script>
+<script src="js/home.js"></script>
+<script src="js/checkout.js"></script>
+
+</body>
+</html>

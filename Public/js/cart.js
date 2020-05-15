@@ -61,6 +61,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 });
 
 function fundown(countr){
+  var user = firebase.auth().currentUser;
  var p = Number(document.getElementById('issoke1' + countr).value);
  if(p>1){
    var qty2 = p - 1;
@@ -68,11 +69,30 @@ function fundown(countr){
  var money = Number(document.getElementById('issoke2'  + countr).firstChild.nodeValue);
  money = (money/p);
 document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
-document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;}
+document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
+var o = document.getElementById('issoke0' + countr);
+
+db.collection("users").doc(user.uid).collection("cart").get()
+.then(function(querySnapshot) {
+  querySnapshot.forEach(function(doc) {
+
+    if(doc.data().name == o.getElementsByClassName('column-2')[0].firstChild.nodeValue)
+    {
+      db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
+      qty: qty2
+    },{merge : true})
+    }
+
+
+  })
+})
+}
+
 
 };
 
 function funup(countr){
+    var user = firebase.auth().currentUser;
  var p = Number(document.getElementById('issoke1' + countr).value);
  var qty2 = p + 1;
  document.getElementById('issoke1' + countr).value = qty2;
@@ -80,6 +100,22 @@ function funup(countr){
  money = (money/p);
  document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
  document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
+ var o = document.getElementById('issoke0' + countr);
+
+ db.collection("users").doc(user.uid).collection("cart").get()
+ .then(function(querySnapshot) {
+   querySnapshot.forEach(function(doc) {
+
+     if(doc.data().name == o.getElementsByClassName('column-2')[0].firstChild.nodeValue)
+     {
+       db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
+       qty: qty2
+     },{merge : true})
+     }
+
+
+   })
+ })
 };
 /*document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
@@ -92,7 +128,7 @@ function funup(countr){
 };*/
 function removehere(countr){
   var user = firebase.auth().currentUser;
-  window.alert(countr);
+
   var div = document.getElementById("issoke0"+countr);
   var itemname = document.getElementById('issoke' + countr).previousSibling.firstChild.nodeValue
   db.collection("users").doc(user.uid).collection("cart").get()
@@ -110,11 +146,15 @@ function removehere(countr){
           doc.ref.delete().then(function() {
             console.log("1300135 Document successfully deleted!");
             div.parentNode.removeChild(div);
-            swal("Item successfully removed!","You can add back the items in the shop", "success");
+          //  location.reload();
+
 
             document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - (doc.data().qty*doc.data().money)));
-
-            location.reload();
+          //  swal("Item successfully removed!","You can add back the items in the shop", "success");
+            swal({title: "Item successfully removed!", text:"You can add back the items in the shop", type: "success",icon: "success"})
+            .then(function(){
+              location.reload();
+            });
           }).catch(function(error) {
             console.error("Error removing document: ", error);
           });
@@ -129,3 +169,16 @@ function removehere(countr){
 
 
 };
+function boom(){
+  var user = firebase.auth().currentUser;
+
+  db.collection("users").doc(user.uid).get().then(function(d){
+    if(d.data().cartqty !== 0)
+    {
+      window.location = "123index.html";
+    }
+    else {
+      swal({title: "No items in cart!", text:"Find items in the shop", type: "success",icon: "error"});
+    }
+  })
+}

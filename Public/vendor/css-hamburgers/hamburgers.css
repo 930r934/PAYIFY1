@@ -29,6 +29,7 @@
   position: relative; }
 
 .hamburger-inner {
+  
   display: block;
   top: 50%;
   margin-top: -2px; }
