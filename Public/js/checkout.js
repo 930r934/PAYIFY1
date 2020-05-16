@@ -7,7 +7,7 @@ function funk(){
 
 }
 
-
+var invaild_cred = 0;
 
 firebase.auth().onAuthStateChanged(function(user) {
   if (!user) {
@@ -71,8 +71,8 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
                 db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get().then(function(d){
-                window.alert(pg);
-                window.alert(document.getElementById("yomoneyb2").firstChild.nodeValue);
+
+
                 db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
                   balance: (d.data().balance - document.getElementById("yomoneyb2").firstChild.nodeValue)
                 })
@@ -301,7 +301,6 @@ function nextPrev(n) {
 
 
     document.getElementById("twohere").innerHTML = " ";
-    window.alert("yaw");
     db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").get().then(function(querySnapshot){
       querySnapshot.forEach(function(doc) {
         card[y] = doc.data().cardno;
@@ -371,25 +370,26 @@ else
 
 }
 
-window.alert(currentTab);
+
 
 
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    window.alert("NOPE");
-    window.alert(tc);
+
+
 
           if(whe == 0)
           {
-
+            window.alert("ivede");
             db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").get().then(function(querySnapshot){
               querySnapshot.forEach(function(doc) {
 
                 if(doc.data().cardno == tc)
                 {
 
-                  if ((document.getElementById("cardholder").value = doc.data().cardname) && (document.getElementById("cardnumber").value = doc.data().cardno) && (document.getElementById("date").value = doc.data().expr) && (document.getElementById("cvv").value = doc.data().cvv) )
+                  if ((document.getElementById("cardholder").value == doc.data().cardname) && (document.getElementById("cardnumber").value == doc.data().cardno) && (document.getElementById("date").value == doc.data().expr) && (document.getElementById("cvv").value == doc.data().cvv) )
                   {
+                    window.alert("ivede");
                     var d = doc.data().balinc;
 
                     if(d < document.getElementById("yomoneyb2"))
@@ -450,6 +450,18 @@ window.alert(currentTab);
                   else {
 
                     window.alert("Invalid Card credentials!");
+                    invaild_cred += 1;
+                    if(invaild_cred == 3)
+                    {
+                      window.alert("entered invalid credentials 3 times. you have been logged out");
+                      firebase.auth().signOut().then(function() {
+                        window.location = "login.html";
+                        // Sign-out successful.
+                        }).catch(function(error) {
+                          window.alert("FAKK"+ error);
+                          // An error happened.
+                        });
+                    }
                     window.location = 'Shopping-Cart.html';
 
 
@@ -468,7 +480,7 @@ window.alert(currentTab);
 
 
           else {
-                window.alert("New Card");
+
                 db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").add({
                   cardname : document.getElementById("cardholder").value,
                   cardno : document.getElementById("cardnumber").value,

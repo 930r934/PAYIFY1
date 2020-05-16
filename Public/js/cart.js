@@ -38,7 +38,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                final_amt = final_amt + (quant*doc.data().money);
 
                document.getElementById("finalamt").firstChild.nodeValue = final_amt ;
-
+               document.getElementById("finalamt1").firstChild.nodeValue = final_amt ;
            });
 
 
@@ -70,6 +70,7 @@ function fundown(countr){
  money = (money/p);
 document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
 document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
+document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
 var o = document.getElementById('issoke0' + countr);
 
 db.collection("users").doc(user.uid).collection("cart").get()
@@ -100,6 +101,7 @@ function funup(countr){
  money = (money/p);
  document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
  document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
+ document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
  var o = document.getElementById('issoke0' + countr);
 
  db.collection("users").doc(user.uid).collection("cart").get()
@@ -150,6 +152,7 @@ function removehere(countr){
 
 
             document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - (doc.data().qty*doc.data().money)));
+            document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
           //  swal("Item successfully removed!","You can add back the items in the shop", "success");
             swal({title: "Item successfully removed!", text:"You can add back the items in the shop", type: "success",icon: "success"})
             .then(function(){
@@ -181,4 +184,27 @@ function boom(){
       swal({title: "No items in cart!", text:"Find items in the shop", type: "success",icon: "error"});
     }
   })
+}
+
+function applycoup(){
+
+
+
+db.collection("Coupons").doc("Items").collection("coupons").get().then(function(d){
+d.forEach(function(doc) {
+  if(doc.id == document.getElementById('iput').value)
+  {
+    document.getElementById("vd").style.visibility = 'visible';
+    setTimeout(function(){ document.getElementById("vd").style.visibility = 'hidden'; }, 1000);
+    document.getElementById('disc').innerHTML = doc.data().discount + "%";
+    document.getElementById('finalamt1').innerHTML = Number(document.getElementById('finalamt').innerHTML) - ((doc.data().discount/100)*Number(document.getElementById('finalamt').innerHTML));
+  }
+  else {
+    document.getElementById("ivd").style.visibility = 'visible';
+    setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
+  }
+})
+})
+
+
 }
