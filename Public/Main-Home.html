@@ -46,10 +46,11 @@
 			</div>
 
 
-			<div class="wrap_header" style="background-color:black;">
-				<div class="logo">
+			<div class="wrap_header" style="background-color:black;z-index: 1000;">
+				<a class="logo" href="Main-Home.html">
 					<img src="images/logo.jpg">
-				</div>
+				</a>
+
 					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
 				<div class="wrap_menu">
 					<nav class="menu">
@@ -161,7 +162,7 @@
 		<!-- Header Mobile -->
 		<div class="wrap_header_mobile">
 			<!-- Logo moblie -->
-			<a href="index.html" class="logo-mobile">
+			<a href="Main-Home.html" class="logo-mobile">
 				<img src="images/logo.jpg" alt="IMG-LOGO">
 			</a>
 
@@ -169,89 +170,64 @@
 			<div class="btn-show-menu">
 				<!-- Header Icon mobile -->
 				<div class="header-icons-mobile">
-					<a href="#" class="header-wrapicon1 dis-block">
-						<img src="images/icons/icon-header-01.png" class="header-icon1" alt="ICON">
-					</a>
+
+					<div class="header-wrapicon2">
+						<img src="images/icons/icon-header-01.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
+
+
+						<!-- Header cart noti -->
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" >
+
+							</ul>
+
+							<div class="header-cart-buttons" >
+									Rs
+									<h2 style="font-family: fantasy;" id="yomoneyb0">
+
+										0
+									</h2>
+
+									<!-- Button -->
+
+									<a href="Profile-Management.html" style="width:100%; padding:20px; text-align: center;">
+									Profile Management
+									</a>
+
+									<button type="submit" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4" onclick="funct123()">
+										Logout
+									</button>
+
+							</div>
+						</div>
+					</div>
 
 					<span class="linedivide2"></span>
 
 					<div class="header-wrapicon2">
 						<img src="images/icons/icon-header-02.png" class="header-icon1 js-show-header-dropdown" alt="ICON">
-						<span class="header-icons-noti">0</span>
+						<span class="header-icons-noti" id='num11'>0</span>
 
 						<!-- Header cart noti -->
-						<div class="header-cart header-dropdown">
-							<ul class="header-cart-wrapitem">
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-01.jpg" alt="IMG">
-									</div>
+						<div class="header-cart header-dropdown" >
+							<ul class="header-cart-wrapitem" id="jackS1">
 
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											White Shirt With Pleat Detail Back
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $19.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-02.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Converse All Star Hi Black Canvas
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $39.00
-										</span>
-									</div>
-								</li>
-
-								<li class="header-cart-item">
-									<div class="header-cart-item-img">
-										<img src="images/item-cart-03.jpg" alt="IMG">
-									</div>
-
-									<div class="header-cart-item-txt">
-										<a href="#" class="header-cart-item-name">
-											Nixon Porter Leather Watch In Tan
-										</a>
-
-										<span class="header-cart-item-info">
-											1 x $17.00
-										</span>
-									</div>
-								</li>
 							</ul>
 
-							<div class="header-cart-total">
-								Total: $75.00
-							</div>
-
 							<div class="header-cart-buttons">
-								<div class="header-cart-wrapbtn">
+
 									<!-- Button -->
-									<a href="cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
+									<a href="Shopping-Cart.html" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
 										View Cart
 									</a>
-								</div>
 
-								<div class="header-cart-wrapbtn">
-									<!-- Button -->
-									<a href="#" class="flex-c-m size1 bg1 bo-rad-20 hov1 s-text1 trans-0-4">
-										Check Out
-									</a>
-								</div>
 							</div>
 						</div>
 					</div>
+
+
+
+
 				</div>
 
 				<div class="btn-show-menu-mobile hamburger hamburger--squeeze" style="background-color: #c551c0; height:100%">
@@ -267,26 +243,7 @@
 		<div class="wrap-side-menu" >
 			<nav class="side-menu">
 				<ul class="main-menu">
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<span class="topbar-child1">
-							Free shipping for standard order over $100
-						</span>
-					</li>
 
-					<li class="item-topbar-mobile p-l-20 p-t-8 p-b-8">
-						<div class="topbar-child2-mobile">
-							<span class="topbar-email">
-								fashe@example.com
-							</span>
-
-							<div class="topbar-language rs1-select2">
-								<select class="selection-1" name="time">
-									<option>USD</option>
-									<option>EUR</option>
-								</select>
-							</div>
-						</div>
-					</li>
 
 					<li class="item-topbar-mobile p-l-10">
 						<div class="topbar-social-mobile">
@@ -299,38 +256,50 @@
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="index.html">Home</a>
+						<a href="Main-Home.html">Home</a>
 						<ul class="sub-menu">
-							<li><a href="index.html">Homepage V1</a></li>
-							<li><a href="home-02.html">Homepage V2</a></li>
-							<li><a href="home-03.html">Homepage V3</a></li>
+							<li><a href="Profile-Management.html">Profile Management</a></li>
+							<li><a href="Wallet-Management.html">Wallet Management</a></li>
+							<li><a href="Shopping-Cart.html">Shopping Cart</a></li>
 						</ul>
 						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">Shop</a>
+						<a href="#">Shop</a>
+						<ul class="sub-menu">
+							<li><a href="Phones.html">Phones</a></li>
+							<li><a href="Accessories.html">Accessories</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li>
+							<a href="#">Book</a>
+														<ul class="sub-menu">
+							<li><a href="Movie-Ticket.html">Movie-Ticket</a></li>
+							<li><a href="Bus-Ticket.html">Bus-Ticket</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
+					</li>
+
+					<li><a href="#">Bill</a>
+						<ul class="sub-menu">
+							<li><a href="electric-City.html">Electricity</a></li>
+							<li><a href="Mobile-recharge.html">Mobile recharge</a></li>
+						</ul>
+						<i class="arrow-main-menu fa fa-angle-right" aria-hidden="true"></i>
 					</li>
 
 					<li class="item-menu-mobile">
-						<a href="product.html">Sale</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="cart.html">Features</a>
-					</li>
-
-					<li class="item-menu-mobile">
-						<a href="blog.html">Blog</a>
+						<a href="Help.html">Help</a>
 					</li>
 
 					<li class="item-menu-mobile">
 						<a href="about.html">About</a>
 					</li>
 
-					<li class="item-menu-mobile">
-						<a href="contact.html">Contact</a>
-					</li>
+
 				</ul>
 			</nav>
 		</div>
@@ -356,7 +325,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="zoomIn">
 							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="phones.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Check it out
 							</a>
 						</div>
@@ -391,7 +360,7 @@
 
 						<div class="wrap-btn-slide1 w-size1 animated visible-false" data-appear="rotateIn">
 							<!-- Button -->
-							<a href="product.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
+							<a href="Accessories.html" class="flex-c-m size2 bo-rad-23 s-text2 bgwhite hov1 trans-0-4">
 								Shop Now
 							</a>
 						</div>
@@ -455,97 +424,86 @@
 		</div>
 	</section>
 
-	<section class="newproduct bgwhite p-t-45 p-b-105" id="here13">
+	<section class="newproduct bgwhite p-t-45 p-b-11" id="here13" style="transition: background-color 1.5s;">
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center">Featured Products</h3>
 			</div>
 			<div class="wrap-slick2">
 				<div class="slick2">
-					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/iphone11maxx.jpg" alt="IMG-PRODUCT">
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="block2-txt p-t-20">Iphone-11-max<br>
-								<span class="block2-price m-text6 p-r-5">Rs 60000.00</span>
-							</div>
-						</div>
-					</div>
-					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+
+
+
+
+
+
+
+
+
+					<div class="item-slick2 p-l-15 p-r-15" >
+						<div class="block2" id="this">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/a8+.jpg" alt="IMG-PRODUCT">
+								<img src="images/samsungm40.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Add to Cart</button>
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('2')">Add to Cart</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Samsung A8+<br>
-								<span class="block2-price m-text6 p-r-5">Rs 30000.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/bluetooth speaker.jpg" alt="IMG-PRODUCT">
+						<div class="block2" id="this2">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+								<img src="images/samsunga6+.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(2)">Add to Cart</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id='this3'>
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/one+6t.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(3)">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">bluetooth speaker<br>
-								<span class="block2-price m-text6 p-r-5">2000.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/mobile stand.jpg" alt="IMG-PRODUCT">
-								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
-										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
-										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
-									</a>
-									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
-									</div>
-								</div>
-							</div>
-							<div class="block2-txt p-t-20">Mobile Stand<br>
-								<span class="block2-price m-text6 p-r-5">Rs 500.00</span>
-							</div>
-						</div>
-					</div>
-					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id='this4'>
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
 								<img src="images/iphone11.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -554,65 +512,89 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(4)">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Iphone-11<br>
-								<span class="block2-price m-text6 p-r-5">Rs 20000.00</span>
 							</div>
+
 						</div>
-					</div>
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this5">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
-								<img src="images/power bank.jpg" alt="IMG-PRODUCT">
+								<img src="images/vivo s1.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(5)">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Power Bank<br>
-								<span class="block2-price m-text6 p-r-5">Rs 1500.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this6">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/vivov15.jpg" alt="IMG-PRODUCT">
+									<img src="images/vivov15.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(6)">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Vivo-V15<br>
-								<span class="block2-price m-text6 p-r-5">Rs 18000.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
-								<img src="images/case.jpg" alt="IMG-PRODUCT">
+						<div class="block2" id="this7">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+								<img src="images/redmi note 8.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="a(7)">
+											Add to Cart
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this8">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+								<img src="images/xiaomi note 10.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4 modal fade" type="button" onclick="a(8)">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
@@ -623,21 +605,156 @@
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Case<br>
-								<span class="block2-oldprice m-text7 p-r-5">Rs 500.00</span>
-								<span class="block2-newprice m-text8 p-r-5">Rs 350.00</span>
-							</div>
+
 						</div>
 					</div>
+
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<!-- Shipping -->
+
+
+	<section class="newproduct p-t-45 p-b-105" id="here14" >
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text5 t-center">Featured Movies</h3>
+			</div>
+			<div class="wrap-slick9">
+				<div class="slick9" >
+
+
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/11.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(1)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/12.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(2)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/13.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(3)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/14.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(4)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/15.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(5)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+					<div class="item-slick2 p-l-15 p-r-15">
+						<div class="block2" id="this71">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative" style="max-height: 290px;">
+								<img src="images/Movies/11.jpg" alt="IMG-PRODUCT">
+								<div class="block2-overlay trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+									</a>
+									<div class="block2-btn-addcart w-size1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" onclick="g(6)">
+											Book
+										</button>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<!--
 	<section class="shipping bgwhite p-t-62 p-b-46">
 		<div class="flex-w p-l-15 p-r-15">
-			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1">
+			<div class="flex-col-c w-size5 p-l-15 p-r-15 p-t-16 p-b-15 respon1" >
 				<h4 class="m-text12 t-center">
 					Free Delivery Worldwide
 				</h4>
@@ -667,7 +784,7 @@
 				</span>
 			</div>
 		</div>
-	</section>
+	</section> Shipping -->
 
 
 
@@ -803,6 +920,7 @@
 		  db.collection('users').doc(user.uid).get().then(doc => {
 			document.getElementById('navuser').innerHTML = doc.data().name;
 			document.getElementById('num1').innerHTML = doc.data().cartqty;
+			document.getElementById('num11').innerHTML = doc.data().cartqty;
 		  })
 
 			.catch(function(er){
@@ -825,9 +943,10 @@
 
 
 	</script>
-	
+
 	<script src="js/home.js"></script>
 	<script src="js/main.js"></script>
+		<script src="js/addphonesmovie.js"></script>
 
 
 

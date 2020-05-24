@@ -318,6 +318,11 @@ textarea.input100 {
   position: relative;
 }
 
+.validate-input1 {
+  position: relative;
+}
+
+
 .alert-validate::before {
   content: attr(data-validate);
   position: absolute;
@@ -368,14 +373,100 @@ textarea.input100 {
   right: 16px;
 }
 
+.alert-validate1::before {
+  content: attr(data-validate1);
+  position: absolute;
+  height:20px;
+  text-align: center;
+  width: 75%;
+  background-color: #fff;
+  border: 1px solid #0bc800;
+  border-radius: 14px;
+  padding: 4px 25px 4px 10px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 10px;
+  pointer-events: none;
+
+  font-family: Ubuntu-Bold;
+  color: ##0bc800;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+
+  visibility: hidden;
+  opacity: 0;
+
+  -webkit-transition: opacity 0.4s;
+  -o-transition: opacity 0.4s;
+  -moz-transition: opacity 0.4s;
+  transition: opacity 0.4s;
+}
+
+.alert-validate1::after {
+  content: "\f00c";
+  font-family: FontAwesome;
+  display: block;
+  position: absolute;
+
+  color: #0bc800;
+  font-size: 16px;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  transform: translateY(-50%);
+  right: 16px;
+}
+
+.alert-validate1:hover:before {
+  visibility: visible;
+  opacity: 1;
+}
+
+@media (max-width: 992px) {
+  .alert-validate1::before {
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
 .alert-validate:hover:before {
   visibility: visible;
   opacity: 1;
+}
+
+.ww{
+  padding-left: 100px;
 }
 
 @media (max-width: 992px) {
   .alert-validate::before {
     visibility: visible;
     opacity: 1;
+  }
+}
+
+.pp{
+  color:#000;
+  transition: color 0.5s;
+}
+
+@media (max-width: 992px) {
+  .wrap-contact100 {
+    width: 99vw;
+    background: transparent;
+
+  }
+  .ww{
+    padding-left: 0px;
+  }
   }
 }

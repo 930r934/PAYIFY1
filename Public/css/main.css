@@ -84,6 +84,7 @@ Input, textarea : 14px/1.6 '', Arial, sans-serif;
 }
 /* === SOFTEN THE MODAL BACKDROP SO THE EFFECT IS MORE VISIBLE === */
 .modal-backdrop {
+  z-index:1100;
   opacity: 0.65;
   filter: alpha(opacity=65);
 }
@@ -1776,10 +1777,24 @@ margin-bottom: 0;}
 @media (max-width: 1280px) {
   .next-slick2 {
     right: 0px;
+
   }
 
   .prev-slick2 {
     left: 0px;
+
+  }
+
+  .next-slick4 {
+    right: 0px;
+    top: 2600px;
+
+  }
+
+  .prev-slick4 {
+    left: 0px;
+    top:2600px;
+
   }
 }
 
@@ -2730,3 +2745,6 @@ transition: visibility 2s, opacity 2s linear;
         height: 25vh;
       }
     }
+.block2-txt {
+  color: white;
+}

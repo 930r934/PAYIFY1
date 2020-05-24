@@ -13,19 +13,22 @@
         var cap1Slide1 = [];
         var cap2Slide1 = [];
         var btnSlide1 = [];
-        document.getElementById("here12").style.backgroundColor = "black";
-        document.getElementById("here13").style.backgroundColor = "#363636";
-        document.getElementsByClassName('m-text5')[0].style.color= "white";
         var x = document.getElementsByClassName('block2-txt');
         var y = document.getElementsByClassName('m-text6');
-        for(var i = 0; i < x.length; i++) {
-            x[i].style.color= "white";
+        for(var q = 0; i < x.length; i++) {
+            x[q].style.color= "white";
 
         }
-        for(var i = 0; i < y.length; i++) {
+        for(var p = 0; i < y.length; i++) {
 
-            y[i].style.color= "white";
+            y[p].style.color= "white";
         }
+        document.getElementById("here12").style.backgroundColor = "black";
+        document.getElementById("here13").style.backgroundColor = "#363636";
+        document.getElementById("here14").style.backgroundColor = "black";
+        document.getElementsByClassName('m-text5')[0].style.color= "white";
+        document.getElementsByClassName('m-text5')[1].style.color= "white";
+
         for(var i=0; i<itemSlick1.length; i++) {
           cap1Slide1[i] = $(itemSlick1[i]).find('.caption1-slide1');
           cap2Slide1[i] = $(itemSlick1[i]).find('.caption2-slide1');
@@ -73,11 +76,16 @@
             {
             document.getElementById("here12").style.backgroundColor = "#ee133d";
             document.getElementById("here13").style.backgroundColor = "#eb3c5e";
+
+            document.getElementById("here14").style.backgroundColor = "rgb(242, 112, 159)";
             document.getElementsByClassName('m-text5')[0].style.color= "white";
+            document.getElementsByClassName('m-text5')[1].style.color= "white";
             }else if(currentSlide == 2){
             document.getElementById("here12").style.backgroundColor = "white";
             document.getElementById("here13").style.backgroundColor = "white";
+            document.getElementById("here14").style.backgroundColor = "white";
             document.getElementsByClassName('m-text5')[0].style.color= "black";
+            document.getElementsByClassName('m-text5')[1].style.color= "black";
             var x = document.getElementsByClassName('block2-txt');
             var y = document.getElementsByClassName('m-text6');
             for(var i = 0; i < x.length; i++) {
@@ -93,7 +101,9 @@
             {
             document.getElementById("here12").style.backgroundColor = "black";
             document.getElementById("here13").style.backgroundColor = "#363636";
+            document.getElementById("here14").style.backgroundColor = "black";
             document.getElementsByClassName('m-text5')[0].style.color= "white";
+            document.getElementsByClassName('m-text5')[1].style.color= "white";
             var x = document.getElementsByClassName('block2-txt');
             var y = document.getElementsByClassName('m-text6');
             for(var i = 0; i < x.length; i++) {
@@ -201,6 +211,46 @@
             },
         });
 
-
+        $('.slick9').slick({
+            slidesToShow: 5,
+            slidesToScroll: 5,
+            infinite: true,
+            autoplay: false,
+            autoplaySpeed: 6000,
+            arrows: true,
+            appendArrows: $('.wrap-slick9'),
+            prevArrow:'<button class="arrow-slick4 prev-slick4"><i class="fa  fa-angle-left" aria-hidden="true"></i></button>',
+            nextArrow:'<button class="arrow-slick4 next-slick4"><i class="fa  fa-angle-right" aria-hidden="true"></i></button>',
+            responsive: [
+                {
+                  breakpoint: 1200,
+                  settings: {
+                    slidesToShow: 5,
+                    slidesToScroll: 5
+                  }
+                },
+                {
+                  breakpoint: 992,
+                  settings: {
+                    slidesToShow: 4,
+                    slidesToScroll: 4
+                  }
+                },
+                {
+                  breakpoint: 768,
+                  settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3
+                  }
+                },
+                {
+                  breakpoint: 576,
+                  settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                  }
+                }
+            ]
+        });
 
 })(jQuery);

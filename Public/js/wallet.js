@@ -1,3 +1,4 @@
+var cvv22;
 firebase.auth().onAuthStateChanged(function(user) {
     if (!user) {
          document.getElementsByTagName("body")[0].style.display = "none"
@@ -348,7 +349,11 @@ firebase.auth().onAuthStateChanged(function(user) {
 
           //Adding new card
           const new_card = document.querySelector('#new-card');
-          new_card.addEventListener('submit', (e) => {
+
+
+
+
+          document.querySelector('#bb1').addEventListener('submit', (e) => {
               e.preventDefault();
 
               const cardname = new_card['cardname'].value;
@@ -358,24 +363,33 @@ firebase.auth().onAuthStateChanged(function(user) {
               const cardphone = new_card['cardphone'].value;
 
 
-              db.collection('users').doc(user.uid).collection('wallet').get().then(docs1 =>{
-                  docs1.forEach(doc1 => {
-                      docid1 = doc1.id
-                      db.collection('users').doc(user.uid).collection('wallet').doc(docid1).get().then( doc => {
-                            db.collection('users').doc(user.uid).collection('wallet').doc(docid1).collection('cards').add({
+
+
+
+                            db.collection('users').doc(user.uid).collection('wallet').doc("wallet").collection('cards').add({
                               cardname: cardname,
                               cardno: cardno,
                               expr: cardexpr,
                               cvv : cardcvv,
                               phone : cardphone
-                            })
-                      })
-                  })
-              })
-              new_card.reset();
-                 $('#exampleModalCenter').modal('toggle');
-                 document.getElementById("addedcard").style.display = "block";
-              $('#addedcard').delay(3000).fadeOut('slow');
+                            }).then(function(){
+
+                              $('#exampleModalCenter').modal('hide');
+                              $('#exampleModalCenter1').modal('hide');
+                              $('#addmoneymodal').modal('hide');
+                              new_card.reset();
+                              document.getElementById("addedcard").style.display = "block";
+                           $('#addedcard').delay(3000).fadeOut('slow');
+
+                         }).catch(function(er){
+                           window.alert(er);
+                         })
+
+
+
+
+
+
           });
 
 
@@ -481,21 +495,23 @@ firebase.auth().onAuthStateChanged(function(user) {
 
           //Adding money to wallet
           const add_money = document.querySelector('#addmoney');
-          add_money.addEventListener('submit', (e) => {
-            window.alert("HERE");
+
+          document.querySelector('#bb2').addEventListener('click', (e) => {
+
               e.preventDefault();
               var accid = ($('input[name="cards"]:checked').attr("data-id"));
               var amount = parseInt(add_money['amount'].value);
-              var cardcvv = $('input[name="cards"]:checked').parent().find('.ipcvv').val();
+              var cardcvv = $('input[name="cards"]:checked').parent().find('.form-check-label').find('.card').find('.card-body').find('.ipcvv').val();
+
 
 
               if($('input[name="cards"]:checked').parent().find(".fa-credit-card").val() == undefined){
-                  window.alert("HEEYY ");
+                window.alert("POTAS");
                   db.collection('users').doc(user.uid).collection('wallet').doc('wallet').collection('accounts').doc(accid).get().then( doc => {
                       amt = doc.data().accbal;
                       cvv = doc.data().cvv;
                   });
-                  if(cvv == cardcvv){
+                  if(cvv22 == cardcvv){
                       if(amount > amt){
                           const lowmoneycard = document.querySelector("#lowmoneycard");
                           lowmoneycard.style.display = "block";
@@ -516,32 +532,38 @@ firebase.auth().onAuthStateChanged(function(user) {
                       $('#wrongcvv').delay(3000).fadeOut('slow');
                   }
               }else{
-                window.alert("ITS HERE");
+
+
                   db.collection('users').doc(user.uid).collection('wallet').doc('wallet').collection('cards').doc(accid).get().then( doc => {
-                      cvv = doc.data().cvv;
+                      cvv22 = doc.data().cvv;
+                      if(cvv22 == cardcvv){
+                          // if(amount > amt){
+                          // 	const lowmoneycard = document.querySelector("#lowmoneycard");
+                          // 	lowmoneycard.style.display = "block";
+                          // 	$('#lowmoneycard').delay(3000).fadeOut('slow');
+                          // }else{
+                              db.collection('users').doc(user.uid).collection('wallet').doc('wallet').update({balance: firebase.firestore.FieldValue.increment(amount)}).then(function(){
+
+                                $('#exampleModalCenter').modal('hide');
+                                $('#exampleModalCenter1').modal('hide');
+                                $('#addmoneymodal').modal('hide');
+                                add_money.reset();
+                                   const addedmoney = document.querySelector("#addedmoney");
+                                addedmoney.style.display = "block";
+                                $('#addedmoney').delay(3000).fadeOut('slow');
+                              });
+
+                          // }
+                      }else{
+                          const wrongcvv = document.querySelector("#wrongcvv");
+                          wrongcvv.style.display = "block";
+                          $('#wrongcvv').delay(3000).fadeOut('slow');
+
+
+                      }
                   });
-                  if(cvv == cardcvv){
-                      // if(amount > amt){
-                      // 	const lowmoneycard = document.querySelector("#lowmoneycard");
-                      // 	lowmoneycard.style.display = "block";
-                      // 	$('#lowmoneycard').delay(3000).fadeOut('slow');
-                      // }else{
-                          db.collection('users').doc(user.uid).collection('wallet').doc('wallet').update({balance: firebase.firestore.FieldValue.increment(amount)});
-                          add_money.reset();
-                             $('#addmoneymodal').modal('toggle');
-                             const addedmoney = document.querySelector("#addedmoney");
-                          addedmoney.style.display = "block";
-                          $('#addedmoney').delay(3000).fadeOut('slow');
-                      // }
-                  }else{
-                      const wrongcvv = document.querySelector("#wrongcvv");
-                      wrongcvv.style.display = "block";
-                      $('#wrongcvv').delay(3000).fadeOut('slow');
-                      $('#addmoneymodal').modal('toggle');
-                      const addedmoney = document.querySelector("#addedmoney");
-                   addedmoney.style.display = "block";
-                   $('#addedmoney').delay(3000).fadeOut('slow');
-                  }
+
+
               }
           });
 
@@ -656,3 +678,19 @@ firebase.auth().onAuthStateChanged(function(user) {
 
       }
   });
+  const new_card = document.querySelector('#new-card');
+  function chek(){
+    const cardname = new_card['cardname'].value;
+    const cardno = new_card['cardno'].value;
+    const cardexpr = new_card['cardexpr'].value;
+    const cardcvv = new_card['cvv'].value;
+    const cardphone = new_card['cardphone'].value;
+
+
+    if((cardname == "")||(cardno == "")||(cardexpr == "")||(cardcvv == "")||(cardphone == ""))
+    {
+      window.alert("ETHI");
+      document.getElementById("deletedcard1").style.display = "block";
+   $('#deletedcard1').delay(3000).fadeOut('slow');
+    }
+  }

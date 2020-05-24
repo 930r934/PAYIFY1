@@ -1,14 +1,56 @@
+var currentTab = 0;
+window.onload = function () {
+
+  if(document.location.href.includes("?"))
+  {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&');
+        var data;
+        for (var i = 0, l = params.length; i < l; i++) {
+             tmp = params[i].split('=');
+             console.log(tmp);
+             data = tmp[1];
+        }
+ console.log(data);
+
+        if(data == 3)
+        moviebutt(2);
+        if(data == 6)
+        moviebutt(3);
+        if(data == 5)
+        moviebutt(5);
+        if(data == 4)
+        moviebutt(4);
+        if(data == 4)
+        moviebutt(4);
+        if(data == 2)
+        moviebutt(1);
+        if(data == 1)
+        moviebutt(3);
+      }
+
+}
+
+
 function moviebutt(idnt){
 var movname;
+currentTab = 0;
     db.collection("Movies").doc("M"+idnt).get().then(function(data) {
       document.getElementById("head").innerHTML = data.data().name;
     })
+    console.log("check1");
+    console.log(  document.getElementById('onehere').innerHTML);
+    console.log(  document.getElementById('twohere').innerHTML);
+    console.log(currentTab);
     document.getElementById('onehere').innerHTML = " ";
+    document.getElementById('twohere').innerHTML = " ";
     db.collection("Movies").doc("M"+idnt).get().then(function(data) {
       if(data.exists)
       {
 
          $('#myM').modal('show');
+
+
          movname = data.data().name;
          db.collection("theaters").get()
          .then(function(querySnapshot) {
@@ -123,7 +165,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         {
           var name = data.data().name;
           var cat = data.data().cat;
-          mm5.innerHTML = "<div class='flip-card-front'><img src='"+data.data().Pic+"' alt='Avatar' style='width:256px;height:300px;'></div><div class='flip-card-back'><h1 class='t-left'>"+name+"</h1><p>"+cat+"</p><p>We love that guy</p><button type='submit' class='flex-c-m size1 bg1 bo-rad-0 hov1 s-text1 trans-0-4' style='left:37px;width:70%;position:fixed;top:80%;'onclick='moviebutt(1)'>Book</button></div>";
+          mm5.innerHTML = "<div class='flip-card-front'><img src='"+data.data().Pic+"' alt='Avatar' style='width:256px;height:300px;'></div><div class='flip-card-back'><h1 class='t-left'>"+name+"</h1><p>"+cat+"</p><p>A great movie recommended for all romance lovers giving a small taste of thrill too</p><button type='submit' class='flex-c-m size1 bg1 bo-rad-0 hov1 s-text1 trans-0-4' style='left:37px;width:70%;position:fixed;top:80%;'onclick='moviebutt(1)'>Book</button></div>";
         }
         else {
           console.log("doc doesnt exist");
@@ -230,7 +272,7 @@ else{
 
 
 
-var currentTab = 0; // Current tab is set to be the first tab (0)
+ // Current tab is set to be the first tab (0)
 showTab(currentTab); // Display the current tab
 var k;
 function showTab(n) {
@@ -281,7 +323,7 @@ function nextPrev(n) {
 
     }
   }
-  window.alert(k);
+
 
   db.collection("theaters").doc(k).collection("movies").doc(v).get().then(function(doc){
     for(var i = 0;i<doc.data().timings.length;i++)
@@ -305,7 +347,7 @@ function nextPrev(n) {
 
       }
     }
-        window.alert(k);
+
           url = 'selectT.html?name=' + encodeURIComponent(v) +'?theater='+ encodeURIComponent(k) + '?time=' + encodeURIComponent(j) ;
 
       document.location.href = url;

@@ -3,6 +3,7 @@
 
     /*[ Load page ]
     ===========================================================*/
+
     $(".animsition").animsition({
         inClass: 'fade-in',
         outClass: 'fade-out',
@@ -48,6 +49,7 @@
             if (user) {
         db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get().then(function(data){
   				document.getElementById("yomoneyb").innerHTML = data.data().balance;
+          document.getElementById("yomoneyb0").innerHTML = data.data().balance;
   			})
       }})
     });

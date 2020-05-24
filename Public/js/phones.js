@@ -1,4 +1,41 @@
+window.onload = function () {
 
+  if(document.location.href.includes("?"))
+  {
+    var url = document.location.href,
+        params = url.split('?')[1].split('&');
+        var data;
+        for (var i = 0, l = params.length; i < l; i++) {
+             tmp = params[i].split('=');
+             console.log(tmp);
+             data = tmp[1];
+        }
+ console.log(data);
+
+        if(data == 2)
+        {setop(2);
+          $('#myM').modal('show');}
+        if(data == 3)
+        {setop(3);
+          $('#myM').modal('show');}
+        if(data == 4)
+        {setop(4);
+          $('#myM').modal('show');}
+        if(data == 5)
+        {setop(5);
+          $('#myM').modal('show');}
+        if(data == 6)
+        {setop(6);
+          $('#myM').modal('show');}
+        if(data == 7)
+        {setop(7);
+          $('#myM').modal('show');}
+        if(data == 8)
+        {setop(8);
+          $('#myM').modal('show');}
+      }
+
+}
 
 
 const samphone = document.querySelector("#this");
