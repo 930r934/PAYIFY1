@@ -1,3 +1,5 @@
+
+
 firebase.auth().onAuthStateChanged(function(user) {
     if (user) {
     /*  db.collection('users').doc(user.uid).get().then(doc => {
@@ -10,9 +12,8 @@ firebase.auth().onAuthStateChanged(function(user) {
       })*/
 
 
-
       const liste_r1 = document.getElementById('jackS');
-      const liste_r2 = document.getElementById('jackS1');
+
       db.collection("users").doc(user.uid).get()
       .then(function(data){
        no_ofitems = data.data().cartqty;
@@ -29,7 +30,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                   var quant = doc.data().qty;
 
               liste_r1.innerHTML += "<li class='header-cart-item'><div class='header-cart-item-img'><img src='" + doc.data().picloc + "' alt='IMG'></div> <div class='header-cart-item-txt'><a href='#' class='header-cart-item-name'>" + doc.data().name + "</a><span class='header-cart-item-info'>Rs " + (quant*doc.data().money) + "</span></div></li>";
-                liste_r2.innerHTML += "<li class='header-cart-item'><div class='header-cart-item-img'><img src='" + doc.data().picloc + "' alt='IMG'></div> <div class='header-cart-item-txt'><a href='#' class='header-cart-item-name'>" + doc.data().name + "</a><span class='header-cart-item-info'>Rs " + (quant*doc.data().money) + "</span></div></li>";
+
 
 
 

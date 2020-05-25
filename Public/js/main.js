@@ -139,6 +139,9 @@
 
     $(window).resize(function(){
         if($(window).width() >= 992){
+
+
+
             if($('.wrap-side-menu').css('display') == 'block'){
                 $('.wrap-side-menu').css('display','none');
                 $('.btn-show-menu-mobile').toggleClass('is-active');
@@ -147,6 +150,12 @@
                 $('.sub-menu').css('display','none');
                 $('.arrow-main-menu').removeClass('turn-arrow');
             }
+        }
+        else{
+
+
+          //document.getElementById('jackS1') = document.getElementById('jackS');
+
         }
     });
 
@@ -211,6 +220,35 @@
     });
 
 })(jQuery);
+window.onload = function () {
+  firebase.auth().onAuthStateChanged(function(user) {
+      if (user) {
+  if($(window).width() < 992){
+    var p = document.getElementById('jackS1');
+
+    db.collection("users").doc(user.uid).collection("cart").get()
+    .then(function(querySnapshot) {
+
+      querySnapshot.forEach(function(doc) {
+          // doc.data() is never undefined for query doc snapshots
+           var quant = doc.data().qty;
+
+           p.innerHTML += "<li class='header-cart-item'><div class='header-cart-item-img'><img src='" + doc.data().picloc + "' alt='IMG'></div> <div class='header-cart-item-txt'><a href='#' class='header-cart-item-name'>" + doc.data().name + "</a><span class='header-cart-item-info'>Rs " + (quant*doc.data().money) + "</span></div></li>";
+
+
+
+
+
+      })
+
+
+  }).catch(function(er){
+    window.alert(er);
+  })
+  }
+}
+})
+}
 
 function funct123() {
   firebase.auth().onAuthStateChanged(function(user) {
