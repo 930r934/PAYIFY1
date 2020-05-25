@@ -413,11 +413,12 @@ window.alert(currentTab);
 
                 if(doc.data().cardno == tc)
                 {
-
-                  if ((document.getElementById("cardholder").value = doc.data().cardname) && (document.getElementById("cardnumber").value = doc.data().cardno) && (document.getElementById("date").value = doc.data().expr) && (document.getElementById("cvv").value = doc.data().cvv) )
+                  window.alert(tc);
+                  if ((document.getElementById("cardholder").value == doc.data().cardname) && (document.getElementById("cardnumber").value == doc.data().cardno) && (document.getElementById("date").value == doc.data().expr) && (document.getElementById("cvv").value == doc.data().cvv) )
                   {
                     var d = doc.data().balinc;
-
+                  window.alert(document.getElementById("date").value+doc.data().expr);
+                  window.alert(document.getElementById("cvv").value+doc.data().cvv);
                     if(d < total)
                     {
 
