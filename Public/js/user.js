@@ -37,8 +37,8 @@ firebase.auth().onAuthStateChanged(function(user) {
             if($(input).attr('type') == 'password' || $(input).attr('name') == 'pass') {
                 if($(input).val().match(/\d/g) == null) {
 
-                    document.getElementById("pass1").data = "red";
-                    
+                    document.getElementById("v1").data = "red";
+
 
                 }
                 else{
