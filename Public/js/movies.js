@@ -1,6 +1,54 @@
 var currentTab = 0;
 window.onload = function () {
 
+  let timer, currSeconds = 0;
+  resetTimer();
+  function resetTimer() {
+
+
+
+      /* Clear the previous interval */
+      clearInterval(timer);
+
+      /* Reset the seconds of the timer */
+      currSeconds = 0;
+
+      /* Set a new interval */
+      timer =
+          setInterval(startIdleTimer, 1000);
+  }
+
+  // Define the events that
+  // would reset the timer
+  window.onload = resetTimer;
+  window.onmousemove = resetTimer;
+  window.onmousedown = resetTimer;
+  window.ontouchstart = resetTimer;
+  window.onclick = resetTimer;
+  window.onkeypress = resetTimer;
+  window.onscroll = resetTimer;
+  function startIdleTimer() {
+
+      /* Increment the
+          timer seconds */
+      currSeconds++;
+      console.log(currSeconds);
+      /* Set the timer text
+          to the new value */
+
+
+          if(currSeconds == 10)
+          {
+            swal({title: "Where did you go?", text:"You have been logged out!", type: "warning",icon: "warning"}).then(function(){
+              auth.signOut().then(() => {
+                window.location = "login.html";
+              })
+            })
+            }
+
+  }
+
+
   if(document.location.href.includes("?"))
   {
     var url = document.location.href,
@@ -35,6 +83,7 @@ window.onload = function () {
 function moviebutt(idnt){
 var movname;
 currentTab = 0;
+
     db.collection("Movies").doc("M"+idnt).get().then(function(data) {
       document.getElementById("head").innerHTML = data.data().name;
     })
@@ -69,6 +118,7 @@ currentTab = 0;
 
                      }
                  });
+                 console.log(showTab(currentTab));
              })
              .catch(function(error) {
                  console.log("Error getting documents11111111111: ", error);

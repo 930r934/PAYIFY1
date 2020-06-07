@@ -1,7 +1,58 @@
+  var dname,dtime,dt;
 
 
-var dname,dtime,dt;
-window.onload = function () {
+window.onload = function(){
+
+  let timer, currSeconds = 0;
+
+  function resetTimer() {
+
+
+
+      /* Clear the previous interval */
+      clearInterval(timer);
+
+      /* Reset the seconds of the timer */
+      currSeconds = 0;
+
+      /* Set a new interval */
+      timer =
+          setInterval(startIdleTimer, 1000);
+  }
+
+  // Define the events that
+  // would reset the timer
+  window.onload = resetTimer;
+  window.onmousemove = resetTimer;
+  window.onmousedown = resetTimer;
+  window.ontouchstart = resetTimer;
+  window.onclick = resetTimer;
+  window.onkeypress = resetTimer;
+  window.onscroll = resetTimer;
+  function startIdleTimer() {
+
+      /* Increment the
+          timer seconds */
+      currSeconds++;
+      console.log(currSeconds);
+      /* Set the timer text
+          to the new value */
+
+
+          if(currSeconds == 10)
+          {
+            swal({title: "Where did you go?", text:"You have been logged out!", type: "warning",icon: "warning"}).then(function(){
+              auth.signOut().then(() => {
+                window.location = "login.html";
+              })
+            })
+            }
+
+  }
+
+
+
+
     var url = document.location.href,
         params = url.split('?')[1].split('&'),
         params2 = url.split('?')[2].split('&'),
@@ -34,13 +85,11 @@ window.onload = function () {
     data.time = temp;
     temp = data.theater.replace("%20"," ");
     data.theater = temp;
-    window.alert(data.name);
-    window.alert(data.theater);
-    window.alert(data.time);
 dname = data.name;
 
 dtime = data.time;
 dt = data.theater;
+
 /* window.addEventListener('scroll', function(e) {
 
     if(window.pageYOffset > 512)
@@ -57,6 +106,29 @@ dt = data.theater;
     firebase.auth().onAuthStateChanged(function(user) {
         if (user) {
 
+          if($(window).width() < 992){
+            var p = document.getElementById('jackS1');
+
+            db.collection("users").doc(user.uid).collection("cart").get()
+            .then(function(querySnapshot) {
+
+              querySnapshot.forEach(function(doc) {
+                  // doc.data() is never undefined for query doc snapshots
+                   var quant = doc.data().qty;
+
+                   p.innerHTML += "<li class='header-cart-item'><div class='header-cart-item-img'><img src='" + doc.data().picloc + "' alt='IMG'></div> <div class='header-cart-item-txt'><a href='#' class='header-cart-item-name'>" + doc.data().name + "</a><span class='header-cart-item-info'>Rs " + (quant*doc.data().money) + "</span></div></li>";
+
+
+
+
+
+              })
+
+
+          }).catch(function(er){
+            window.alert(er);
+          })
+          }
 
           document.querySelector('#moviename').innerHTML = data.name;
           db.collection("theaters").doc(data.theater).collection("movies").doc(data.name).collection("timings").doc(data.time).get().then(function(data0) {
@@ -155,11 +227,12 @@ if(total > 0)
 
     for( var i = 0; i < seats.length;i++)
     {
+      window.alert(dt);
     db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
 
         SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
 
-    })
+    });
     }
     download("ticket.html","<h2>TICKET</h2>Movie Name___________________________"+document.querySelector('#moviename').innerHTML+"<br/> Issuing Time:___________________________"+Date()+" <br/> Seat numbers___________________________"+seats+"<br/> amount paid___________________________Rs"+total+"<br/> Ticket number___________________________"+(Math.floor(Math.random() * 1000000) + 99999));
   swal({title: "Purchased successfully!", text:"Your Ticket will be downloaded!", type: "success",icon: "success"})
@@ -176,7 +249,7 @@ if(total > 0)
 
 
   }
-  })
+});
 
 })
 
@@ -184,6 +257,7 @@ if(total > 0)
 }
 else
 {
+  window.alert(window.onload);
   Swal.fire({
   position: 'center-end',
   title: 'Liar you didnt choose a seat!',

@@ -95,10 +95,24 @@ firebase.auth().onAuthStateChanged(function(user) {
               })
 
 
-                swal({title: "Order Placed!", text:"Your order will reach you in 5-7 working days!", type: "success",icon: "success"})
-                .then(function(){
-                  window.location = "Main-Home.html";
-                });
+              Swal.fire({
+              position: 'center',
+              title: 'Order Placed!',
+              text:"Your order will reach you in 5-7 working days!",
+              width: 600,
+              padding: '3em',
+              background: '#fff',
+              backdrop: `
+                rgba(0,0,123,0)
+                url("images/money.gif")
+
+              `
+            }).then(function(){
+              window.location = "Main-Home.html";
+            });
+
+              //  swal({title: "", text:"Your order will reach you in 5-7 working days!", type: "success",icon: "success"})
+
 
 
 
@@ -380,7 +394,7 @@ else
 
           if(whe == 0)
           {
-            window.alert("ivede");
+
             db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").get().then(function(querySnapshot){
               querySnapshot.forEach(function(doc) {
 
@@ -389,7 +403,7 @@ else
 
                   if ((document.getElementById("cardholder").value == doc.data().cardname) && (document.getElementById("cardnumber").value == doc.data().cardno) && (document.getElementById("date").value == doc.data().expr) && (document.getElementById("cvv").value == doc.data().cvv) )
                   {
-                    window.alert("ivede");
+
                     var d = doc.data().balinc;
 
                     if(d < document.getElementById("yomoneyb2"))
@@ -458,7 +472,7 @@ else
                         window.location = "login.html";
                         // Sign-out successful.
                         }).catch(function(error) {
-                          window.alert("FAKK"+ error);
+                          window.alert(error);
                           // An error happened.
                         });
                     }

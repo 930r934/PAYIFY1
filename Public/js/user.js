@@ -225,6 +225,43 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
     })
 
+    var japa = document.getElementById("remove");
+    japa.addEventListener('click',(e) => {
+      swal({
+        title: "Are you sure?",
+        text: "Your account will be deleted permenantly!",
+        icon: "warning",
+        buttons: true,
+        dangerMode: true,
+      })
+      .then((willDelete) => {
+        if (willDelete) {
+
+            db.collection('users').doc(user.uid).delete().then(function() {
+              user.delete().then(function() {
+                window.location = "login.html";
+                }).catch(function(error) {
+                  window.alert(error);
+                });
+              console.log("Account successfully deleted!");
+            }).catch(function(error) {
+              console.error("Error removing document: ", error);
+            });
+
+
+
+
+
+        } else {
+          swal("Good Choice!");
+        }
+      });
+
+
+
+    })
+
+
     })(jQuery);
 
 

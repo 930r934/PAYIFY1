@@ -134,7 +134,31 @@
 
 
 
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
 
+<script>
+  // Your web app's Firebase configuration
+  var firebaseConfig = {
+    apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+		authDomain: "payment-application-ae819.firebaseapp.com",
+		databaseURL: "https://payment-application-ae819.firebaseio.com",
+		projectId: "payment-application-ae819",
+		storageBucket: "payment-application-ae819.appspot.com",
+		messagingSenderId: "751770368720",
+		appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+		measurementId: "G-9EHEV8DQLD"
+  };
+  // Initialize Firebase
+  firebase.initializeApp(firebaseConfig);
+
+    const auth = firebase.auth();
+    const db = firebase.firestore();
+
+
+</script>
 
 	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<!--===============================================================================================-->

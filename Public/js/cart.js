@@ -72,7 +72,7 @@ document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2)
 document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
 document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
 var o = document.getElementById('issoke0' + countr);
-
+var mainqty;
 db.collection("users").doc(user.uid).collection("cart").get()
 .then(function(querySnapshot) {
   querySnapshot.forEach(function(doc) {
@@ -82,6 +82,14 @@ db.collection("users").doc(user.uid).collection("cart").get()
       db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
       qty: qty2
     },{merge : true})
+    db.collection("users").doc(user.uid).get().then(function(d){
+     mainqty = d.data().cartqty;
+     db.collection("users").doc(user.uid).set({
+     cartqty: mainqty-1
+   },{merge : true})
+    })
+
+
     }
 
 
@@ -103,16 +111,25 @@ function funup(countr){
  document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
  document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
  var o = document.getElementById('issoke0' + countr);
-
+ var mainqty;
  db.collection("users").doc(user.uid).collection("cart").get()
  .then(function(querySnapshot) {
    querySnapshot.forEach(function(doc) {
 
      if(doc.data().name == o.getElementsByClassName('column-2')[0].firstChild.nodeValue)
      {
+
        db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
        qty: qty2
      },{merge : true})
+     db.collection("users").doc(user.uid).get().then(function(d){
+      mainqty = d.data().cartqty;
+      db.collection("users").doc(user.uid).set({
+      cartqty: mainqty+1
+    },{merge : true})
+     })
+
+
      }
 
 

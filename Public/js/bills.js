@@ -15,7 +15,7 @@ var state,dist,area,pinc,house,oname;
     var input = $('.validate-input .input100');
 
     $('#update').on('click',function(){
-
+        window.alert(window.onload)
         var check = true;
 
         for(var i=0; i<input.length - 2; i++) {

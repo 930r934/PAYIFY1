@@ -2748,3 +2748,7 @@ transition: visibility 2s, opacity 2s linear;
 .block2-txt {
   color: white;
 }
+.aref {
+  font-weight: 10px;
+  color: blue;
+}
