@@ -236,7 +236,7 @@ function markbordersC(ele)
   //ele.style.background="green";
 }
 function addC(num){
-  myFt();
+
 
 
   firebase.auth().onAuthStateChanged(function(user) {
@@ -281,7 +281,9 @@ function addC(num){
 
     db.collection("Items").doc("phone").collection("phone").doc("phone" + num).get()
               .then(function(data) {
-
+                if(data.data().qty>0)
+                {
+                  myFt();
                 if(flag == 0)
                 {
                 db.collection("users").doc(user.uid).collection("cart").doc("item" + (qty1+1) ).set({
@@ -293,6 +295,9 @@ function addC(num){
               })
 
                 .then(function() {
+                      db.collection("Items").doc("phone").collection("phone").doc("phone" + num).set({
+                        qty: data.data().qty-1
+                      },{merge: true})
                     console.log("Document successfully written!");
                     })
                 .catch(function(error) {
@@ -307,6 +312,9 @@ function addC(num){
                },{merge: true})
 
                  .then(function() {
+                   db.collection("Items").doc("phone").collection("phone").doc("phone" + num).set({
+                     qty: data.data().qty-1
+                   },{merge: true})
                      console.log("Document successfully written!");
                      })
                  .catch(function(error) {
@@ -326,7 +334,10 @@ function addC(num){
               .catch(function(){
                 window.alert("YOOYYOOMAA")
               })
-
+            }
+            else{
+              window.alert("out of stock")
+            }
               })
               .catch(function(error) {
                 console.log("error", error);

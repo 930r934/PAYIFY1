@@ -86,7 +86,18 @@ db.collection("users").doc(user.uid).collection("cart").get()
      mainqty = d.data().cartqty;
      db.collection("users").doc(user.uid).set({
      cartqty: mainqty-1
-   },{merge : true})
+   },{merge : true}).then(function(){
+     db.collection("Items").doc("phone").collection("phone").get()
+   .then(function(querySnapshot) {
+     querySnapshot.forEach(function(d1) {
+       if(d1.data().name == document.getElementById('issoke0' + countr).childNodes[1].textContent)
+       {
+     db.collection("Items").doc("phone").collection("phone").doc(d1.id).set({
+       qty: d1.data().qty+1
+     },{merge: true}) }
+   })
+ })
+   })
     })
 
 
@@ -102,39 +113,61 @@ db.collection("users").doc(user.uid).collection("cart").get()
 
 function funup(countr){
     var user = firebase.auth().currentUser;
- var p = Number(document.getElementById('issoke1' + countr).value);
- var qty2 = p + 1;
- document.getElementById('issoke1' + countr).value = qty2;
- var money = Number(document.getElementById('issoke2'  + countr).firstChild.nodeValue);
- money = (money/p);
- document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
- document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
- document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
- var o = document.getElementById('issoke0' + countr);
- var mainqty;
- db.collection("users").doc(user.uid).collection("cart").get()
- .then(function(querySnapshot) {
-   querySnapshot.forEach(function(doc) {
 
-     if(doc.data().name == o.getElementsByClassName('column-2')[0].firstChild.nodeValue)
-     {
-
-       db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
-       qty: qty2
-     },{merge : true})
-     db.collection("users").doc(user.uid).get().then(function(d){
-      mainqty = d.data().cartqty;
-      db.collection("users").doc(user.uid).set({
-      cartqty: mainqty+1
-    },{merge : true})
-     })
+       db.collection("Items").doc("phone").collection("phone").get()
+     .then(function(querySnapshot) {
+       querySnapshot.forEach(function(d1) {
+         if(d1.data().name == document.getElementById('issoke0' + countr).childNodes[1].textContent)
+         {
+           if(d1.data().qty !== 0)
+           {
+           var p = Number(document.getElementById('issoke1' + countr).value);
+           var qty2 = p + 1;
 
 
-     }
+           document.getElementById('issoke1' + countr).value = qty2;
+           var money = Number(document.getElementById('issoke2'  + countr).firstChild.nodeValue);
+           money = (money/p);
+           document.getElementById('issoke2'  + countr).firstChild.nodeValue = (money*qty2);
+           document.getElementById("finalamt").firstChild.nodeValue = Number((document.getElementById("finalamt").firstChild.nodeValue - money*p) + (money*qty2)) ;
+           document.getElementById("finalamt1").firstChild.nodeValue = document.getElementById("finalamt").firstChild.nodeValue;
+           var o = document.getElementById('issoke0' + countr);
+           var mainqty;
+           db.collection("users").doc(user.uid).collection("cart").get()
+           .then(function(querySnapshot) {
+             querySnapshot.forEach(function(doc) {
+
+               if(doc.data().name == o.getElementsByClassName('column-2')[0].firstChild.nodeValue)
+               {
+
+                 db.collection("users").doc(user.uid).collection("cart").doc(doc.id).set({
+                 qty: qty2
+               },{merge : true})
+               db.collection("users").doc(user.uid).get().then(function(d){
+                mainqty = d.data().cartqty;
+                db.collection("users").doc(user.uid).set({
+                cartqty: mainqty+1
+              },{merge : true}).then(function(){
+                db.collection("Items").doc("phone").collection("phone").doc(d1.id).set({
+                  qty: d1.data().qty-1
+                },{merge: true})
+              })
+               })
 
 
-   })
- })
+               }
+
+
+             })
+           })
+         }
+         else{
+           window.alert("No more stock")
+         }
+         }
+        }) })
+
+
 };
 /*document.onreadystatechange = function() {
     if (document.readyState !== "complete") {
@@ -160,11 +193,24 @@ function removehere(countr){
         db.collection("users").doc(user.uid).get().then(function(da){
           db.collection("users").doc(user.uid).set({
           cartqty: (da.data().cartqty - doc.data().qty)
-        },{merge : true})
+        },{merge : true}).then(function(){
+            db.collection("Items").doc("phone").collection("phone").get().then(function(querySnapshot) {
+                querySnapshot.forEach(function(d1) {
+                if(d1.data().name == itemname)
+                {
+          db.collection("Items").doc("phone").collection("phone").doc(d1.id).set({
+            qty: d1.data().qty+doc.data().qty
+          },{merge: true}).then(function(){
+            doc.ref.delete().then(function() {
+              console.log("1300135 Document successfully deleted!");
+              div.parentNode.removeChild(div); })
+          })
+              }
+        })
+      })
+        })
 
-          doc.ref.delete().then(function() {
-            console.log("1300135 Document successfully deleted!");
-            div.parentNode.removeChild(div);
+
           //  location.reload();
 
 
@@ -178,9 +224,9 @@ function removehere(countr){
           }).catch(function(error) {
             console.error("Error removing document: ", error);
           });
-          })
-        }
-    });
+          }
+
+    })
 })
 .catch(function(error) {
     console.log("Error getting documents11111111111: ", error);

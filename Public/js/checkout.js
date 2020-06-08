@@ -1,4 +1,4 @@
-
+var gbal;
 
 function funk(){
 
@@ -22,7 +22,10 @@ firebase.auth().onAuthStateChanged(function(user) {
 
     (function ($) {
 
-
+      db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get()
+      .then(function(d){
+       gbal = d.data().balance;
+      })
         "use strict";
 
         /*==================================================================
@@ -406,7 +409,7 @@ else
 
                     var d = doc.data().balinc;
 
-                    if(d < document.getElementById("yomoneyb2"))
+                    if(d < (Number(document.getElementById("yomoneyb2").textContent)-gbal))
                     {
 
                       window.alert("Card ERROR!");
@@ -415,10 +418,12 @@ else
 
                     }
 
-
+                    window.alert(d);
+                    window.alert(gbal);
+                    window.alert(Number(document.getElementById("yomoneyb2").textContent));
                     db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
 
-                    balinc : (d - document.getElementById("yomoneyb2"))
+                    balinc : (d - (Number(document.getElementById("yomoneyb2").textContent)-gbal))
 
                     })
 
@@ -515,7 +520,7 @@ else
 
                           var d = doc.data().balinc;
 
-                          if(d < document.getElementById("yomoneyb2"))
+                          if(d < (Number(document.getElementById("yomoneyb2").textContent)-gbal))
                           {
 
                             window.alert("Card ERROR!");
@@ -527,7 +532,7 @@ else
 
                           db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
 
-                          balinc : (d - document.getElementById("yomoneyb2"))
+                          balinc : (d - (Number(document.getElementById("yomoneyb2").textContent)-gbal))
 
                           })
 

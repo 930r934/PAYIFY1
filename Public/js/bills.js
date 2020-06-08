@@ -523,7 +523,7 @@ else
                     window.alert("ivede");
                     var d = doc.data().balinc;
 
-                    if(d < (document.getElementById("famt")-gbal))
+                    if(d < (Number(document.getElementById("famt"))-gbal))
                     {
 
                       window.alert("Card ERROR!");
