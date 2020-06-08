@@ -353,7 +353,7 @@ firebase.auth().onAuthStateChanged(function(user) {
 
 
 
-          document.querySelector('#bb1').addEventListener('submit', (e) => {
+          document.querySelector('#bb1').addEventListener('click', (e) => {
               e.preventDefault();
 
               const cardname = new_card['cardname'].value;
@@ -374,10 +374,9 @@ firebase.auth().onAuthStateChanged(function(user) {
                               phone : cardphone
                             }).then(function(){
 
-                              $('#exampleModalCenter').modal('hide');
-                              $('#exampleModalCenter1').modal('hide');
-                              $('#addmoneymodal').modal('hide');
-                              new_card.reset();
+
+
+
                               document.getElementById("addedcard").style.display = "block";
                            $('#addedcard').delay(3000).fadeOut('slow');
 

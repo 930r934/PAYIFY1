@@ -286,7 +286,7 @@ function addC(num){
                   myFt();
                 if(flag == 0)
                 {
-                db.collection("users").doc(user.uid).collection("cart").doc("item" + (qty1+1) ).set({
+                db.collection("users").doc(user.uid).collection("cart").add({
                 name: data.data().name,
                 qty: 1,
                 itemNo: data.data().phoneNo,
