@@ -1,5 +1,12 @@
 var gbal;
-
+var url = document.location.href,
+    params = url.split('?')[1].split('&');
+    var data321;
+    for (var i = 0, l = params.length; i < l; i++) {
+         tmp = params[i].split('=');
+         console.log(tmp);
+         data321 = tmp[1];
+    }
 function funk(){
 
   $('#myM').modal('hide');
@@ -56,6 +63,14 @@ firebase.auth().onAuthStateChanged(function(user) {
                 }
             }
 
+            if((input[2].value.toString().length != 10)){
+              showValidate(input[2]);
+              check = false;
+            }
+            if((input[3].value.toString().length != 6)){
+              showValidate(input[3]);
+              check = false;
+            }
             if(check == true)
 
             {
@@ -144,6 +159,7 @@ firebase.auth().onAuthStateChanged(function(user) {
                 if($(input).val().trim() == ''){
                     return false;
                 }
+
             }
         }
 
@@ -203,7 +219,7 @@ firebase.auth().onAuthStateChanged(function(user) {
         //document.getElementById("finalamt").firstChild.nodeValue = final_amt ;
 
     });
-
+tots = data321;
 document.getElementById("yomoneyb2").firstChild.nodeValue = tots;
 })
 

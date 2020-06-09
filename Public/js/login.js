@@ -40,7 +40,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }).catch(err => {
       const wronglogin = document.querySelector("#wronglogin");
       wronglogin.style.display = "block";
-      wronglogin.innerHTML = err;
+      wronglogin.innerHTML = "Wrong username or password";
       $('#wronglogin').delay(5000).fadeOut('slow');
     })
   })

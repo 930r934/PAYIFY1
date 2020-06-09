@@ -1,5 +1,5 @@
   var dname,dtime,dt;
-
+  var gbal;
 
 window.onload = function(){
 
@@ -139,8 +139,10 @@ dt = data.theater;
 
 
             for(var i = 0; i < data0.data().SeatsBooked.length; i++ )
-            document.getElementById(""+data0.data().SeatsBooked[i]+"").style.background = 'yellow';
+            {
 
+            document.getElementById(""+data0.data().SeatsBooked[i]+"").style.background = 'yellow';
+          }
 
             }
             else {
@@ -212,68 +214,12 @@ console.log(seats);
 
 function blub(){
 
-if(total > 0)
-{
-  firebase.auth().onAuthStateChanged(function(user){
-
-  db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get().then(function(data){
-
-  if(data.data().balance >= total)
-  {
-  db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
-    balance: (data.data().balance - total)
-  })
-
-
-    for( var i = 0; i < seats.length;i++)
-    {
-      window.alert(dt);
-    db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
-
-        SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
-
-    });
-    }
-    download("ticket.html","<h2>TICKET</h2>Movie Name___________________________"+document.querySelector('#moviename').innerHTML+"<br/> Issuing Time:___________________________"+Date()+" <br/> Seat numbers___________________________"+seats+"<br/> amount paid___________________________Rs"+total+"<br/> Ticket number___________________________"+(Math.floor(Math.random() * 1000000) + 99999));
-  swal({title: "Purchased successfully!", text:"Your Ticket will be downloaded!", type: "success",icon: "success"})
-  .then(function(){
-    window.location = "Movie-Ticket.html";
-  });
-  }
-  else {
-    window.alert("NOT ENOUGH MONEY!");
-
-    $('#myM').modal('show');
-
-
-
-
-  }
-});
-
-})
+$('#myModal123').modal('show');
 
 
 }
-else
-{
-  window.alert(window.onload);
-  Swal.fire({
-  position: 'center-end',
-  title: 'Liar you didnt choose a seat!',
-  icon: "error",
-  width: 600,
-  padding: '3em',
-  background: '#fff',
-  backdrop: `
-    rgba(0,0,123,0.4)
-    url("images/nyan-cat.gif")
-    left bottom
-    no-repeat
-  `
-})
-}
-}
+
+
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
@@ -391,6 +337,9 @@ function nextPrev(n) {
   var c = b.getElementsByTagName("input");
   var v = document.getElementById("head").textContent;
 
+db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get().then(function(dp){
+gbal = dp.data().balance;
+})
 
 
   if(currentTab == 1)
@@ -401,7 +350,7 @@ function nextPrev(n) {
 
 
     document.getElementById("twohere").innerHTML = " ";
-    window.alert("yaw");
+
     db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").get().then(function(querySnapshot){
       querySnapshot.forEach(function(doc) {
         card[y] = doc.data().cardno;
@@ -471,13 +420,12 @@ else
 
 }
 
-window.alert(currentTab);
+
 
 
   if (currentTab >= x.length) {
     //...the form gets submitted:
-    window.alert("NOPE");
-    window.alert(tc);
+
 
           if(whe == 0)
           {
@@ -487,27 +435,29 @@ window.alert(currentTab);
 
                 if(doc.data().cardno == tc)
                 {
-                  window.alert(tc);
+
                   if ((document.getElementById("cardholder").value == doc.data().cardname) && (document.getElementById("cardnumber").value == doc.data().cardno) && (document.getElementById("date").value == doc.data().expr) && (document.getElementById("cvv").value == doc.data().cvv) )
                   {
                     var d = doc.data().balinc;
                   window.alert(document.getElementById("date").value+doc.data().expr);
                   window.alert(document.getElementById("cvv").value+doc.data().cvv);
-                    if(d < total)
+                    if(d < (total-gbal))
                     {
 
                       window.alert("Card ERROR!");
-                      window.location = 'Shopping-Cart.html';
+                      window.location = 'Movie-Ticket.html';
 
 
                     }
 
 
-                    db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
+                        db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
 
-                    balinc : (d - total)
+                        balinc : (d - (total-gbal))
 
-                    })
+                        })
+
+
 
                     db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
                       balance: 0
@@ -515,6 +465,7 @@ window.alert(currentTab);
 
                     for( var i = 0; i < seats.length;i++)
                     {
+
                     db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
 
                         SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
@@ -587,54 +538,59 @@ window.alert(currentTab);
 
                           var d = doc.data().balinc;
 
-                          if(d < total)
+                          if(d < (total-gbal))
                           {
 
                             window.alert("Card ERROR!");
-                            window.location = 'Shopping-Cart.html';
+                            window.location = 'Movie-Ticket.html';
 
 
                           }
 
 
-                          db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
 
-                          balinc : (d - document.getElementById("yomoneyb2"))
+                            db.collection("users").doc(user.uid).collection("wallet").doc("wallet").collection("cards").doc(doc.id).update({
 
+                            balinc : (d - (total-gbal))
+
+                          }).then(function(){
+
+                            db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
+                              balance: 0
+                            })
+
+                            for( var i = 0; i < seats.length;i++)
+                            {
+                            db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
+
+                                SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
+
+                            })
+                            }
+
+
+                          $('#myM2').modal('hide');
+                            Swal.fire({
+                            position: 'center',
+                            title: 'Purchase Completed!',
+                            width: 600,
+                            padding: '3em',
+                            background: '#fff',
+                            backdrop: `
+                              rgba(0,0,123,0)
+                              url("images/money.gif")
+
+                            `
+                          }).then(function(){
+
+                            download("ticket.html","<h2>TICKET</h2>Movie Name___________________________"+document.querySelector('#moviename').innerHTML+"<br/> Issuing Time:___________________________"+Date()+" <br/> Seat numbers___________________________"+seats+"<br/> amount paid___________________________Rs"+total+"<br/> Ticket number___________________________"+(Math.floor(Math.random() * 1000000) + 99999));
+
+                            window.location = 'Main-Home.html';
+                          })
                           })
 
-                          db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
-                            balance: 0
-                          })
-
-                          for( var i = 0; i < seats.length;i++)
-                          {
-                          db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
-
-                              SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
-
-                          })
-                          }
 
 
-                        $('#myM2').modal('hide');
-                          Swal.fire({
-                          position: 'center',
-                          title: 'Purchase Completed!',
-                          width: 600,
-                          padding: '3em',
-                          background: '#fff',
-                          backdrop: `
-                            rgba(0,0,123,0)
-                            url("images/money.gif")
-
-                          `
-                        }).then(function(){
-
-                          download("ticket.html","<h2>TICKET</h2>Movie Name___________________________"+document.querySelector('#moviename').innerHTML+"<br/> Issuing Time:___________________________"+Date()+" <br/> Seat numbers___________________________"+seats+"<br/> amount paid___________________________Rs"+total+"<br/> Ticket number___________________________"+(Math.floor(Math.random() * 1000000) + 99999));
-
-                          window.location = 'Main-Home.html';
-                        })
 
 
 
@@ -694,4 +650,103 @@ function validateForm() {
     document.getElementsByClassName("step")[currentTab].className += " finish";
   }
   return valid; // return the valid status
+}
+
+
+function applycoup(){
+
+
+
+db.collection("Coupons").doc("Items").collection("coupons").get().then(function(d){
+  var flag = 0;
+d.forEach(function(doc) {
+
+  if(doc.id == document.getElementById('iput').value)
+  {
+    flag=1;
+    document.getElementById("vd").textContent = ""+doc.data().discount+"%  Applied";
+    document.getElementById("vd").style.visibility = 'visible';
+    setTimeout(function(){ document.getElementById("vd").style.visibility = 'hidden'; }, 1000);
+    total = total - ((doc.data().discount/100)*total);
+
+  }
+
+})
+if(flag == 0) {
+  document.getElementById("ivd").style.visibility = 'visible';
+  setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
+}
+})
+
+setTimeout(kk, 2000);
+
+}
+
+function kk(){
+  $('#myModal123').modal('hide');
+
+
+
+  if(total > 0)
+  {
+    firebase.auth().onAuthStateChanged(function(user){
+
+    db.collection("users").doc(user.uid).collection("wallet").doc("wallet").get().then(function(data){
+
+    if(data.data().balance >= total)
+    {
+    db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
+      balance: (data.data().balance - total)
+    })
+
+
+      for( var i = 0; i < seats.length;i++)
+      {
+
+      db.collection("theaters").doc(dt).collection("movies").doc(dname).collection("timings").doc(dtime).update({
+
+          SeatsBooked: firebase.firestore.FieldValue.arrayUnion(seats[i])
+
+      });
+      }
+      download("ticket.html","<h2>TICKET</h2>Movie Name___________________________"+document.querySelector('#moviename').innerHTML+"<br/> Issuing Time:___________________________"+Date()+" <br/> Seat numbers___________________________"+seats+"<br/> amount paid___________________________Rs"+total+"<br/> Ticket number___________________________"+(Math.floor(Math.random() * 1000000) + 99999));
+    swal({title: "Purchased successfully!", text:"Your Ticket will be downloaded!", type: "success",icon: "success"})
+    .then(function(){
+      window.location = "Movie-Ticket.html";
+      });
+    }
+    else {
+      window.alert("NOT ENOUGH MONEY!");
+
+      $('#myM').modal('show');
+
+
+
+
+    }
+  });
+
+  })
+
+
+  }
+  else
+  {
+
+
+    Swal.fire({
+    position: 'center-end',
+    title: 'Liar you didnt choose a seat!',
+    icon: "error",
+    width: 600,
+    padding: '3em',
+    background: '#fff',
+    backdrop: `
+      rgba(0,0,123,0.4)
+      url("images/nyan-cat.gif")
+      left bottom
+      no-repeat
+    `
+  })
+  }
 }

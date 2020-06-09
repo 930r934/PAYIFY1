@@ -52,7 +52,7 @@
 					<img src="images/logo.jpg">
 				</a>
 
-					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
+
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
@@ -536,7 +536,7 @@
 	<script type="text/javascript">
 	firebase.auth().onAuthStateChanged(function(user) {
 		db.collection('users').doc(user.uid).get().then(doc => {
-			document.getElementById('navuser').innerHTML = doc.data().name;
+		
 			document.getElementById('num1').innerHTML = doc.data().cartqty;
 		})
 	});

@@ -362,7 +362,7 @@
 	</section>
 
 
-	<section class="newproduct  p-b-105" style="background-color:transparent;">
+	<section class="newproduct  p-b-105" style="background-image:url('images/joke.gif');">
 		<div class="container">
 			<div class="sec-title p-b-60">
 				<h3 class="m-text5 t-center" style="color:white;">Popular Movies</h3>
@@ -613,7 +613,7 @@
 
 	  firebase.auth().onAuthStateChanged(function(user) {
 		  db.collection('users').doc(user.uid).get().then(doc => {
-
+				document.getElementById('navuser').innerHTML = doc.data().name;
 			document.getElementById('num1').innerHTML = doc.data().cartqty;
 		  })
 

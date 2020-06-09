@@ -51,7 +51,7 @@
 					<img src="images/logo.jpg">
 				</a>
 
-					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
+
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
@@ -692,7 +692,32 @@ Total:
 	</div>
 	</div>
 
+	<div id="myModal123" class="modal" style="z-index: 1101;">
 
+  <!-- Modal content -->
+  <div class="modal-content t-center" >
+
+		<h1> APPLY COUPON?
+		</h1>
+		<div class="size11 bo4 m-r-10 t-center" style="margin-left: 300px;">
+			<input class="sizefull s-text7 p-l-22 p-r-22" type="text" name="coupon-code" placeholder="Enter Coupon Code" id='iput' >
+		</div>
+
+		<div class="size12 trans-0-4 m-t-10 m-b-10 m-r-10" style="margin-left: 300px;">
+			<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4" onclick="applycoup()">Apply coupon</button>
+
+		</div>
+		<button class=" bo-rad-23 s-text1 " style="background-color:green;visibility:hidden;" id="vd"><i class="fa fa-check" style="font-size:30px;" aria-hidden="true"></i>
+		</button>
+		<button class=" bo-rad-23 s-text1 " style="background-color:red;position:relative;top:0px;left:-37px;visibility:hidden;" id="ivd"><i class="fa fa-times" style="font-size:30px;" aria-hidden="true"></i>
+		</button>
+		<div class="size12 trans-0-4 m-t-10 m-b-10 m-r-10" style="margin-left: 300px;">
+			<button class="flex-c-m sizefull bg1 bo-rad-23 hov1 s-text1 trans-0-4"  onclick="kk()">Skip</button>
+
+		</div>
+  </div>
+
+</div>
 
 
 
@@ -764,7 +789,7 @@ Total:
 
 	  firebase.auth().onAuthStateChanged(function(user) {
 		  db.collection('users').doc(user.uid).get().then(doc => {
-			document.getElementById('navuser').innerHTML = doc.data().name;
+			
 			document.getElementById('num1').innerHTML = doc.data().cartqty;
 		  })
 

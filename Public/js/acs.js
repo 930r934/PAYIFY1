@@ -348,7 +348,7 @@ function addC(num){
                }
 
                else{
-                 window.display("WHAAAATAFAAK");
+                 window.display("");
                }
 
                 flag = 0;
@@ -357,7 +357,7 @@ function addC(num){
                 cartqty: qty1
               },{merge : true})
               .catch(function(){
-                window.alert("YOOYYOOMAA")
+                window.alert("MAAAA")
               })
 
               })

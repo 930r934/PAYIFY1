@@ -59,7 +59,7 @@
 					<img src="images/logo.jpg">
 				</a>
 
-					<h4 style="margin-left:0px; margin-right: 5px; color:purple"><strong>Welcome <span id="navuser">user</span>! </strong> </h4>
+					
 				<div class="wrap_menu">
 					<nav class="menu">
 						<ul class="main_menu">
@@ -314,7 +314,7 @@
 	<div class="container-contact100" id="updateuser">
 
 		<div class="wrap-contact100">
-			<form class="contact100-form validate-form" id="update-user">
+			<form class="contact100-form validate-form" id="update-user" >
 				<span class="contact100-form-title">
 					Check Out
 				</span>
@@ -335,14 +335,14 @@
 				</div>
 
 				<h5 style="margin-left:10px; margin-bottom:10px;">Phone Number : </h5>
-				<div class="wrap-input100 validate-input"  data-validate = "Please enter your Phone number">
-					<input class="input100" type="number" name="Phonenumber" placeholder="+91" id="number" length="10">
+				<div class="wrap-input100 validate-input"  data-validate = "Please enter valid Phone number">
+					<input class="input100" type="number" name="Phonenumber" placeholder="+91" id="number" minlength="10" max-length="10">
 					<span class="focus-input100"></span>
 				</div>
 
 				<h5 style="margin-left:10px; margin-bottom:10px;">PIN number : </h5>
-				<div class="wrap-input100 validate-input"  data-validate = "Please enter your PIN number">
-					<input class="input100" type="text" name="Phonenumber" placeholder="5600--" id="number" length="6">
+				<div class="wrap-input100 validate-input"  data-validate = "Please enter valid PIN number">
+					<input class="input100" type="number" name="PINCODE" placeholder="5600--" id="pinc" length="6">
 					<span class="focus-input100"></span>
 				</div>
 

@@ -340,7 +340,12 @@ function boom(){
   db.collection("users").doc(user.uid).get().then(function(d){
     if(d.data().cartqty !== 0)
     {
-      window.location = "123index.html";
+
+
+        url = '123index.html?num=' + encodeURIComponent(Number(document.getElementById("finalamt1").textContent));
+        document.location.href = url;
+
+
     }
     else {
       swal({title: "No items in cart!", text:"Find items in the shop", type: "success",icon: "error"});
@@ -353,19 +358,23 @@ function applycoup(){
 
 
 db.collection("Coupons").doc("Items").collection("coupons").get().then(function(d){
+  var flag=0;
 d.forEach(function(doc) {
   if(doc.id == document.getElementById('iput').value)
   {
+    flag=1;
     document.getElementById("vd").style.visibility = 'visible';
     setTimeout(function(){ document.getElementById("vd").style.visibility = 'hidden'; }, 1000);
     document.getElementById('disc').innerHTML = doc.data().discount + "%";
     document.getElementById('finalamt1').innerHTML = Number(document.getElementById('finalamt').innerHTML) - ((doc.data().discount/100)*Number(document.getElementById('finalamt').innerHTML));
   }
-  else {
-    document.getElementById("ivd").style.visibility = 'visible';
-    setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
-  }
+
 })
+if(flag ==0)
+{
+  document.getElementById("ivd").style.visibility = 'visible';
+  setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
+}
 })
 
 

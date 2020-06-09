@@ -97,7 +97,7 @@ var state,dist,area,pinc,house,oname;
                     db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").get()
                     .then(function(querySnapshot){
                       querySnapshot.forEach(function(doc) {
-                        document.getElementById("hist").innerHTML += "<div class='flex-w flex-sb-m p-b-12'><span class='s-text18 w-size19 w-full-sm'>Date:</span><span class='m-text21 w-size20 w-full-sm'  id='dt1'>"+ doc.data().date.toDate() +"</span><span class='s-text18 w-size19 w-full-sm'>Amount:</span><span class='m-text21 w-size20 w-full-sm' id='amt11'>"+ doc.data().amount +"</span><span class='s-text18 w-size19 w-full-sm'>Units:</span><span class='m-text21 w-size20 w-full-sm' id='unit1'>"+ doc.data().units +"</span></div>";
+                        document.getElementById("hist").innerHTML += "<div class='flex-w flex-sb-m p-b-12'><span class='s-text18 w-size19 w-full-sm'>Date:</span><span class='m-text21 w-size20 w-full-sm'  id='dt1'>"+ doc.data().date.toDate() +"</span><span class='s-text18 w-size19 w-full-sm'>Amount:</span><span class='m-text21 w-size20 w-full-sm' id='amt11'>"+ doc.data().amount +"</span><span class='s-text18 w-size19 w-full-sm'>Units:</span><span class='m-text21 w-size20 w-full-sm' id='unit1'>"+ doc.data().units +"</span><span class='s-text18 w-size19 w-full-sm'>Reciept id:</span><span class='m-text21 w-size20 w-full-sm' id='unit1'>"+doc.data().orderid +"</span></div>";
                       })
                     })
 
@@ -145,11 +145,30 @@ var state,dist,area,pinc,house,oname;
                 if(Number(document.getElementById("famt").innerHTML) <= d.data().balance)
                 {
                   window.alert("cash ondd");
+                  var x = Math.floor((Math.random() * 100000000) + 1000000);
+                    db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").get()
+                    .then(function(all){
+                      var flag=0;
+                      while(1)
+                      {
+                      flag=0;
+                      all.forEach(function(de)  {
+                        if(de.data().order.id == x)
+                        flag=1;
+
+                      })
+                      if(flag==0)
+                      break;
+                      x = Math.floor((Math.random() * 100000000) + 1000000);
+                                            }
+
+                    })
 
                   db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").add({
                     amount: document.getElementById("famt").innerHTML,
                     date: firebase.firestore.Timestamp.now() ,
-                    units: document.getElementById("unit").innerHTML
+                    units: document.getElementById("unit").innerHTML,
+                    orderid: x
                   })
 
 
@@ -167,7 +186,7 @@ var state,dist,area,pinc,house,oname;
 
                     Swal.fire({
                     position: 'center',
-                    title: 'Purchase Completed!',
+                    title: 'Bill Paid!',
                     width: 600,
                     padding: '3em',
                     background: '#fff',
@@ -311,19 +330,23 @@ function applycoup1(){
 
 
 db.collection("Coupons").doc("Items").collection("coupons").get().then(function(d){
+  var flag = 0;
 d.forEach(function(doc) {
   if(doc.id == document.getElementById('iput').value)
   {
+    flag=1;
     document.getElementById("vd").style.visibility = 'visible';
     setTimeout(function(){ document.getElementById("vd").style.visibility = 'hidden'; }, 1000);
     document.getElementById('disc').innerHTML = doc.data().discount + "%";
     document.getElementById('famt').innerHTML = Number(document.getElementById('amt').innerHTML) - ((doc.data().discount/100)*Number(document.getElementById('amt').innerHTML));
   }
-  else {
-    document.getElementById("ivd").style.visibility = 'visible';
-    setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
-  }
+
 })
+if(flag == 0)
+{
+  document.getElementById("ivd").style.visibility = 'visible';
+  setTimeout(function(){ document.getElementById("ivd").style.visibility = 'hidden'; }, 1000);
+}
 })
 
 
@@ -546,11 +569,29 @@ else
                     db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
                       balance: 0
                     })
+                    var x = Math.floor((Math.random() * 100000000) + 1000000);
+                    db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").get()
+                    .then(function(all){
+                      var flag=0;
+                      while(1)
+                      {
+                      flag=0;
+                      all.forEach(function(de)  {
+                        if(de.data().order.id == x)
+                        flag=1;
 
+                      })
+                      if(flag==0)
+                      break;
+                      x = Math.floor((Math.random() * 100000000) + 1000000);
+                                            }
+
+                    })
                     db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").add({
                       amount: document.getElementById("famt").innerHTML,
                       date: firebase.firestore.Timestamp.now() ,
-                      units: document.getElementById("unit").innerHTML
+                      units: document.getElementById("unit").innerHTML,
+                      orderid: x
                     })
 
 
@@ -567,7 +608,7 @@ else
                   $('#myM2').modal('hide');
                     Swal.fire({
                     position: 'center',
-                    title: 'Purchase Completed!',
+                    title: 'Bill Paid!',
                     width: 600,
                     padding: '3em',
                     background: '#fff',
@@ -655,11 +696,29 @@ else
                           db.collection("users").doc(user.uid).collection("wallet").doc("wallet").update({
                             balance: 0
                           })
+                          var x = Math.floor((Math.random() * 100000000) + 1000000);
+                          db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").get()
+                          .then(function(all){
+                            var flag=0;
+                            while(1)
+                            {
+                            flag=0;
+                            all.forEach(function(de)  {
+                              if(de.data().order.id == x)
+                              flag=1;
 
+                            })
+                            if(flag==0)
+                            break;
+                            x = Math.floor((Math.random() * 100000000) + 1000000);
+                                                  }
+
+                          })
                           db.collection("bills").doc(state).collection("district").doc(dist).collection("area").doc(area).collection("houses").doc(house).collection("history").add({
                             amount: document.getElementById("famt").innerHTML,
                             date: firebase.firestore.Timestamp.now() ,
-                            units: document.getElementById("unit").innerHTML
+                            units: document.getElementById("unit").innerHTML,
+                            orderid: x
                           })
 
 
@@ -675,7 +734,7 @@ else
                         $('#myM2').modal('hide');
                           Swal.fire({
                           position: 'center',
-                          title: 'Purchase Completed!',
+                          title: 'Bill Paid!',
                           width: 600,
                           padding: '3em',
                           background: '#fff',
