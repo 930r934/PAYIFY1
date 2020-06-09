@@ -303,16 +303,25 @@
 	</header>
 
 
-	<section class="newproduct bgwhite p-t-45 p-b-105">
+
+
+
+
+
+
+	<section class="newproduct bgwhite p-t-23 p-b-40">
 		<div class="container">
 			<div class="sec-title p-b-60">
-				<h3 class="m-text5 t-center">Featured Products</h3>
+				<h3 class="m-text4 t-center">Featured Products</h3>
 			</div>
+
 			<div class="wrap-slick2">
 				<div class="slick2">
-					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
-							<div class="block2-img wrap-pic-w of-hidden pos-relative">
+
+
+					<div class="item-slick2 p-l-15 p-r-15" >
+						<div class="block2" id="this">
+							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
 								<img src="images/bluetooth earphones.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
@@ -320,19 +329,19 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
-											Add to Cart
-										</button>
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('2')">Add to Cart</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">bluetooth earphones<br>
-								<span class="block2-price m-text6 p-r-5">Rs 6000.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this2">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
 								<img src="images/charger pin converter.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -341,17 +350,17 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">Add to Cart</button>
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('2')">Add to Cart</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Charger Pin Converter<br>
-								<span class="block2-price m-text6 p-r-5">Rs 800.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id='this3'>
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
 								<img src="images/otg cable.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -360,19 +369,20 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('3')">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">otg cable<br>
-								<span class="block2-price m-text6 p-r-5">Rs 500.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id='this4'>
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
 								<img src="images/phone camera lens.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -381,19 +391,20 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('4')">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">phone camera lens<br>
-								<span class="block2-price m-text6 p-r-5">Rs 2000.00</span>
 							</div>
+
 						</div>
-					</div>
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this5">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
 								<img src="images/charger.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -402,40 +413,42 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('5')">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">Charger<br>
-								<span class="block2-price m-text6 p-r-5">Rs 550.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this6">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
-								<img src="images/screen protector.jpg" alt="IMG-PRODUCT">
+									<img src="images/screen protector.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
 									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('6')">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">screen protector<br>
-								<span class="block2-price m-text6 p-r-5">Rs 180.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this7">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative">
 								<img src="images/wired earphones.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
@@ -444,44 +457,404 @@
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" type="button" data-toggle="modal" data-target="#myM" onclick="setop('7')">
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">wired earphones<br>
-								<span class="block2-price m-text6 p-r-5">900.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
 					<div class="item-slick2 p-l-15 p-r-15">
-						<div class="block2">
+						<div class="block2" id="this8">
 							<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
 								<img src="images/usb.jpg" alt="IMG-PRODUCT">
 								<div class="block2-overlay trans-0-4">
-									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+									<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4 modal fade" type="button" data-toggle="modal" data-target="#myM" onclick="setop('8')">
 										<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
 										<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
 									</a>
 									<div class="block2-btn-addcart w-size1 trans-0-4">
-										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4">
+										<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" >
 											Add to Cart
 										</button>
 									</div>
 								</div>
 							</div>
-							<div class="block2-txt p-t-20">USB<br>
-								<span class="block2-oldprice m-text7 p-r-5">Rs 500.00</span>
-								<span class="block2-newprice m-text8 p-r-5">Rs 300.00</span>
-							</div>
+
 						</div>
 					</div>
+
+
 				</div>
 			</div>
 		</div>
+
+
+		<div id="snackbar" >Item has been added to cart..</div>
+
+		<style>
+		#snackbar {
+			visibility: hidden;
+			min-width: 250px;
+			margin-left: -125px;
+			background: #57b846;
+
+			color: white;
+			text-align: center;
+			border-radius: 23px;
+			padding: 16px;
+			position: fixed;
+			z-index: 1;
+			left: 50%;
+			bottom: 30px;
+			font-size: 17px;
+		}
+
+		#snackbar.show {
+			visibility: visible;
+			-webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+			animation: fadein 0.5s, fadeout 0.5s 2.5s;
+		}
+
+		@-webkit-keyframes fadein {
+			from {bottom: 0; opacity: 0;}
+			to {bottom: 30px; opacity: 1;}
+		}
+
+		@keyframes fadein {
+			from {bottom: 0; opacity: 0;}
+			to {bottom: 30px; opacity: 1;}
+		}
+
+		@-webkit-keyframes fadeout {
+			from {bottom: 30px; opacity: 1;}
+			to {bottom: 0; opacity: 0;}
+		}
+
+		@keyframes fadeout {
+			from {bottom: 30px; opacity: 1;}
+			to {bottom: 0; opacity: 0;}
+		}
+		</style>
 	</section>
 
+	<section class="newproduct bgwhite p-t-23 p-b-105">
+		<div class="container">
+			<div class="sec-title p-b-60">
+				<h3 class="m-text4 t-center"> ALL PRODUCTS</h3>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this9">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+						<img src="images/item-02.jpg" alt="IMG-PRODUCT">
+<!-- Block2 -->
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(9)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this10">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-03.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(10)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this11">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-05.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(11)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this12">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+						<img src="images/item-07.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(12)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this13">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+						<img src="images/item-01.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(13)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this14">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-14.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(14)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this15">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+							<img src="images/item-06.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(15)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this16">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-08.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(16)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this17">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-10.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(17)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this18">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelsale">
+						<img src="images/item-11.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(18)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this19">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative block2-labelnew">
+						<img src="images/item-12.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(19)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+
+			<div class="col-sm-12 col-md-5 col-lg-3 p-b-50">
+				<!-- Block2 -->
+				<div class="block2" id="this20">
+					<div class="block2-img wrap-pic-w of-hidden pos-relative">
+						<img src="images/item-15.jpg" alt="IMG-PRODUCT">
+
+						<div class="block2-overlay trans-0-4">
+							<a href="#" class="block2-btn-addwishlist hov-pointer trans-0-4">
+								<i class="icon-wishlist icon_heart_alt" aria-hidden="true"></i>
+								<i class="icon-wishlist icon_heart dis-none" aria-hidden="true"></i>
+							</a>
+
+							<div class="block2-btn-addcart w-size1 trans-0-4">
+								<!-- Button -->
+								<button class="flex-c-m size1 bg4 bo-rad-23 hov1 s-text1 trans-0-4" onclick="addC(20)">
+									Add to Cart
+								</button>
+							</div>
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+
+		<!-- Pagination -->
+
+	</div>
+</div>
+	</section>
 
 
 	<footer class="bg6 p-t-45 p-b-43 p-l-45 p-r-45">
@@ -549,36 +922,122 @@
 		</span>
 	</div>
 	<div id="dropDownSelect1"></div>
+
+
+
+<div class="modal fade" id="myM" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true" data-backdrop="true" data-keyboard="true" style='position: fixed; top: 70px;    z-index: 1101;'>
+<div class="modal-dialog">
+
+<!-- Modal content-->
+<div class="modal-content">
+<div class="modal-header" id='modalheader'>
+
+</div>
+<div class="modal-body">
+<p>Select variant</p>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg11 bo-rad-10 hov3 s-text1" id="b11" onclick="markbordersR(this)" > 64gb/4gb </button>
+</div>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg11 bo-rad-10 hov3 s-text1" id="b12" onclick="markbordersR(this)"> 64gb/6gb </button>
+</div>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg11 bo-rad-10 hov3 s-text1" id="b13" onclick="markbordersR(this)"> 128gb/6gb </button>
+</div>
+<p>Select color</p>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg1 bo-rad-10 hov3 s-text1" id="b14" onclick="markbordersC(this)" >Black</button>
+</div>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg0 bo-rad-10 hov3 s-text1" id="b15" onclick="markbordersC(this)">Orange</button>
+</div>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg9 bo-rad-10 hov3 s-text1" id="b16" onclick="markbordersC(this)">Red</button>
+</div>
+<div style="padding: 3px;">
+<button class="flex-c-m size1 bg10 bo-rad-10 hov3 s-text1" id="b17" onclick="markbordersC(this)">Blue</button>
+<div>
+
+</div>
+<div class="modal-footer" id='modalfooter'>
+
+</div>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+
 	<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
 	<script type="text/javascript" src="vendor/animsition/js/animsition.min.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/popper.js"></script>
 	<script type="text/javascript" src="vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="vendor/select2/select2.min.js"></script>
-	<script type="text/javascript">
-		$(".selection-1").select2({
-			minimumResultsForSearch: 20,
-			dropdownParent: $('#dropDownSelect1')
-		});
-	</script>
 	<script type="text/javascript" src="vendor/slick/slick.min.js"></script>
 	<script type="text/javascript" src="js/slick-custom.js"></script>
 	<script type="text/javascript" src="vendor/countdowntime/countdowntime.js"></script>
 	<script type="text/javascript" src="vendor/lightbox2/js/lightbox.min.js"></script>
 	<script type="text/javascript" src="vendor/sweetalert/sweetalert.min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" src="js/popper.min.js"></script>
+	<script type="text/javascript" src="js/jquery-3.2.1.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/loader.js"></script>
+
+
+
+
+
+
+
+
+
+
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+ https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-analytics.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/7.8.2/firebase-firestore.js"></script>
+
+<script>
+// Your web app's Firebase configuration
+var firebaseConfig = {
+apiKey: "AIzaSyBL1N2ka6BQDb81AI8GKrRf6CPD195LU6M",
+authDomain: "payment-application-ae819.firebaseapp.com",
+databaseURL: "https://payment-application-ae819.firebaseio.com",
+projectId: "payment-application-ae819",
+storageBucket: "payment-application-ae819.appspot.com",
+messagingSenderId: "751770368720",
+appId: "1:751770368720:web:90029124c1dfca20a8fcd5",
+measurementId: "G-9EHEV8DQLD"
+};
+// Initialize Firebase
+firebase.initializeApp(firebaseConfig);
+firebase.analytics();
+
+const auth = firebase.auth();
+const db = firebase.firestore();
+
+
+
+</script>
+
+
+
+
 	<script type="text/javascript">
-		$('.block2-btn-addcart').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to cart !", "success");
-			});
-		});
-		$('.block2-btn-addwishlist').each(function(){
-			var nameProduct = $(this).parent().parent().parent().find('.block2-name').html();
-			$(this).on('click', function(){
-				swal(nameProduct, "is added to wishlist !", "success");
-			});
-		});
+	firebase.auth().onAuthStateChanged(function(user) {
+		db.collection('users').doc(user.uid).get().then(doc => {
+
+			document.getElementById('num1').innerHTML = doc.data().cartqty;
+		})
+	});
 	</script>
-	<script src="js/main.js"></script>
+	<script src="js/acs.js"></script>
+	<script src="js/home.js"></script>
+
 </body>
 </html>
