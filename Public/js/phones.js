@@ -42,7 +42,7 @@ const samphone = document.querySelector("#this");
 db.collection("Items").doc("phone").collection("phone").doc("phone1").get().then(function(data) {
   if(data.exists)
   {
-    samphone.innerHTML += "<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs " + data.data().money  + "</span></div></div>";
+    samphone.innerHTML += "<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs " + data.data().money  + "</span></div></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -56,7 +56,7 @@ const samphone1 = document.querySelector("#this2");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone2").get().then(function(data) {
   if(data.exists)
   {
-    samphone1.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone1.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -70,7 +70,7 @@ const samphone3 = document.querySelector("#this3");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone3").get().then(function(data) {
   if(data.exists)
   {
-    samphone3.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone3.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -83,7 +83,7 @@ const samphone4 = document.querySelector("#this4");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone4").get().then(function(data) {
   if(data.exists)
   {
-    samphone4.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone4.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -96,7 +96,7 @@ const samphone5 = document.querySelector("#this5");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone5").get().then(function(data) {
   if(data.exists)
   {
-    samphone5.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone5.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -109,7 +109,7 @@ const samphone6 = document.querySelector("#this6");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone6").get().then(function(data) {
   if(data.exists)
   {
-    samphone6.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone6.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -122,7 +122,7 @@ const samphone7 = document.querySelector("#this7");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone7").get().then(function(data) {
   if(data.exists)
   {
-    samphone7.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
+    samphone7.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-price m-text6 p-r-5'>Rs "+ data.data().money +"</span></div>";
   }
   else {
     console.log("doc doesnt exist");
@@ -135,7 +135,7 @@ const samphone8 = document.querySelector("#this8");  //disp name and amount for 
 db.collection("Items").doc("phone").collection("phone").doc("phone8").get().then(function(data) {
   if(data.exists)
   {
-    samphone8.innerHTML +="<div class='kg block2-txt p-t-20'>" + data.data().name + "<br></div><div><span class='block2-oldprice m-text7 p-r-5'>Rs 50000.00</span><span class='block2-newprice m-text8 p-r-5'>Rs 35000.00</span>";
+    samphone8.innerHTML +="<div class='kg block2-txt p-t-20' style='color:black;'>" + data.data().name + "<br></div><div><span class='block2-oldprice m-text7 p-r-5'>Rs 50000.00</span><span class='block2-newprice m-text8 p-r-5'>Rs 35000.00</span>";
   }
   else {
     console.log("doc doesnt exist");
